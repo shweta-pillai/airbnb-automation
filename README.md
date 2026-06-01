@@ -289,7 +289,7 @@ Scenario: My new scenario
 
 ---
 
-## 📈 Resume Highlights
+## 📈 Highlights
 
 This project demonstrates:
 
