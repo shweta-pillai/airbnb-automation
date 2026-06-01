@@ -1,0 +1,32 @@
+{
+  "name": "airbnb-e2e-automation",
+  "version": "1.0.0",
+  "description": "End-to-end automation testing framework for Airbnb using Playwright, TypeScript, POM, BDD (Cucumber), and API testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:search": "playwright test tests/e2e/search.spec.ts",
+    "test:booking": "playwright test tests/e2e/booking.spec.ts",
+    "test:auth": "playwright test tests/e2e/auth.spec.ts",
+    "test:api": "playwright test tests/api/",
+    "test:bdd": "cucumber-js",
+    "test:report": "playwright show-report",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf test-results playwright-report"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.2",
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.12",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,1683 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: api\airbnb.api.spec.ts >> API Tests — Network Interception >> API-008: API calls on search page should respond within 5 seconds
+- Location: tests\api\airbnb.api.spec.ts:171:7
+
+# Error details
+
+```
+Error: expect(received).toContain(expected) // indexOf
+
+Expected substring: "airbnb.com"
+Received string:    "https://www.airbnb.co.in/s/New-York/homes?locale=en&_set_bev_on_new_domain=1780336055_EANzE1MzBkY2EyZD&set_everest_cookie_on_new_domain=1780336055.EAMjQ2YjAxNDJiNzk1Mz.UZwcy1nMGcWHNJ5kO1kTsC1W6EfqgZuY7lbHH9XCae0"
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link [ref=e2] [cursor=pointer]:
+    - /url: "#site-content"
+    - text: Skip to content
+    - img [ref=e3]
+  - generic [ref=e14]:
+    - banner [ref=e15]:
+      - generic [ref=e19]:
+        - link [ref=e20] [cursor=pointer]:
+          - /url: /
+          - img [ref=e22]
+        - search [ref=e24]:
+          - generic [ref=e26]:
+            - tablist [ref=e28]:
+              - tab [selected] [ref=e29] [cursor=pointer]:
+                - generic [ref=e32]: Homes
+                - generic [ref=e33]: Homes
+              - tab [ref=e34] [cursor=pointer]:
+                - generic [ref=e38]:
+                  - text: NEW
+                  - generic [ref=e39]: NEW
+                - generic [ref=e42]: Experiences
+                - generic [ref=e43]: Experiences, new
+              - tab [ref=e44] [cursor=pointer]:
+                - generic [ref=e48]:
+                  - text: NEW
+                  - generic [ref=e49]: NEW
+                - generic [ref=e52]: Services
+                - generic [ref=e53]: Services, new
+            - search [ref=e58] [cursor=pointer]:
+              - generic [ref=e59]: Start your search
+              - generic [ref=e60]:
+                - button [ref=e61]:
+                  - generic [ref=e62]: Location
+                  - generic [ref=e64]: Homes in New York
+                - button [ref=e66]:
+                  - generic [ref=e67]: Check in / Check out
+                  - generic [ref=e68]: Any week
+                - button [ref=e70]:
+                  - generic [ref=e71]: Guests
+                  - generic [ref=e72]: Add guests
+              - img [ref=e76]
+        - navigation [ref=e80]:
+          - generic [ref=e81]:
+            - button [ref=e82] [cursor=pointer]:
+              - generic [ref=e83]: Become a host
+            - button [ref=e85] [cursor=pointer]:
+              - img [ref=e87]
+          - button [ref=e91] [cursor=pointer]:
+            - img [ref=e93]
+      - group [ref=e100]:
+        - generic [ref=e101]: filters
+        - generic [ref=e103]:
+          - button [ref=e106] [cursor=pointer]:
+            - img [ref=e108]
+            - generic [ref=e110]: Filters
+          - generic [ref=e112]:
+            - button [ref=e115] [cursor=pointer]:
+              - generic [ref=e116]: Price
+              - img [ref=e119]
+            - button [ref=e123] [cursor=pointer]:
+              - generic [ref=e124]: Type of place
+              - img [ref=e127]
+            - generic [ref=e129]:
+              - checkbox [ref=e132] [cursor=pointer]: Instant Book
+              - checkbox [ref=e135] [cursor=pointer]: 1+ bathrooms
+              - checkbox [ref=e138] [cursor=pointer]: Allows pets
+              - checkbox [ref=e141] [cursor=pointer]: Wifi
+              - checkbox [ref=e144] [cursor=pointer]: Washing machine
+              - checkbox [ref=e147] [cursor=pointer]: Air conditioning
+              - checkbox [ref=e150] [cursor=pointer]: Self check-in
+              - checkbox [ref=e153] [cursor=pointer]: Kitchen
+    - main [ref=e154]:
+      - generic [ref=e155]:
+        - generic [ref=e159]:
+          - heading [level=1] [ref=e162]:
+            - generic [ref=e163]: Search results; Over 1,000 homes in New York
+            - text: Over 1,000 homes in New York
+          - generic [ref=e165]:
+            - img [ref=e169]
+            - generic [ref=e203]:
+              - generic [ref=e204]:
+                - generic [ref=e205]: Prices include all fees
+                - generic [ref=e206]: Prices include all fees
+                - generic [ref=e207]: Prices include all fees
+                - generic [ref=e208]: Prices include all fees
+                - generic [ref=e209]: Prices include all fees
+                - generic [ref=e210]: Prices include all fees
+                - generic [ref=e211]: Prices include all fees
+                - generic [ref=e212]: Prices include all fees
+                - generic [ref=e213]: Prices include all fees
+                - generic [ref=e214]: Prices include all fees
+                - generic [ref=e215]: Prices include all fees
+                - generic [ref=e216]: Prices include all fees
+                - generic [ref=e217]: Prices include all fees
+                - generic [ref=e218]: Prices include all fees
+                - generic [ref=e219]: Prices include all fees
+                - generic [ref=e220]: Prices include all fees
+                - generic [ref=e221]: Prices include all fees
+                - generic [ref=e222]: Prices include all fees
+                - generic [ref=e223]: Prices include all fees
+                - generic [ref=e224]: Prices include all fees
+                - generic [ref=e225]: Prices include all fees
+                - generic [ref=e226]: Prices include all fees
+                - generic [ref=e227]: Prices include all fees
+              - generic [ref=e228]: Prices include all fees
+        - generic [ref=e234]:
+          - group [ref=e240]:
+            - link [ref=e241] [cursor=pointer]:
+              - /url: /rooms/37879131?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2027-01-04&check_out=2027-01-09&children=0&infants=0&pets=0&photo_id=2523844484&source_impression_id=p3_1780336874_P3-3pZjtfZUdU9Wv&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e242]:
+              - group [ref=e245]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                        - generic: Top guest favourite
+                        - generic: Guest favourite
+                    - button [ref=e247] [cursor=pointer]:
+                      - img [ref=e248]
+                  - generic:
+                    - button [disabled] [ref=e251] [cursor=pointer]:
+                      - img [ref=e253]
+                    - button [ref=e256] [cursor=pointer]:
+                      - img [ref=e258]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e264]:
+                  - link [ref=e265] [cursor=pointer]:
+                    - /url: /rooms/37879131?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2027-01-04&check_out=2027-01-09&children=0&infants=0&pets=0&photo_id=2523844484&source_impression_id=p3_1780336874_P3-3pZjtfZUdU9Wv&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e268]
+                  - link [ref=e269] [cursor=pointer]:
+                    - /url: /rooms/37879131?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2027-01-04&check_out=2027-01-09&children=0&infants=0&pets=0&photo_id=2523844484&source_impression_id=p3_1780336874_P3-3pZjtfZUdU9Wv&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e270] [cursor=pointer]:
+                    - /url: /rooms/37879131?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2027-01-04&check_out=2027-01-09&children=0&infants=0&pets=0&photo_id=2523844484&source_impression_id=p3_1780336874_P3-3pZjtfZUdU9Wv&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e271] [cursor=pointer]:
+                    - /url: /rooms/37879131?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2027-01-04&check_out=2027-01-09&children=0&infants=0&pets=0&photo_id=2523844484&source_impression_id=p3_1780336874_P3-3pZjtfZUdU9Wv&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e272] [cursor=pointer]:
+                    - /url: /rooms/37879131?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2027-01-04&check_out=2027-01-09&children=0&infants=0&pets=0&photo_id=2523844484&source_impression_id=p3_1780336874_P3-3pZjtfZUdU9Wv&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e273] [cursor=pointer]:
+                    - /url: /rooms/37879131?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2027-01-04&check_out=2027-01-09&children=0&infants=0&pets=0&photo_id=2523844484&source_impression_id=p3_1780336874_P3-3pZjtfZUdU9Wv&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e274]:
+                - generic [ref=e275]: Room in New York City
+                - generic [ref=e277]: Charming
+                - generic [ref=e278]:
+                  - generic [ref=e279]:
+                    - generic [ref=e280]: 3 beds
+                    - generic [ref=e281]: 3 beds
+                  - generic [ref=e282]:
+                    - generic [ref=e283]: 1 bathroom
+                    - generic [ref=e284]: ","
+                    - generic [ref=e285]: ·
+                    - generic [ref=e286]: 1 bathroom
+                - generic [ref=e288]:
+                  - generic [ref=e289]: 4–9 Jan
+                  - generic [ref=e290]: 4–9 Jan
+                - generic [ref=e291]:
+                  - generic [ref=e294]:
+                    - button [ref=e299] [cursor=pointer]:
+                      - text: ₹85,122
+                      - generic [ref=e300]: Show price breakdown
+                    - generic [ref=e302]: for 5 nights
+                    - generic [ref=e303]: ₹85,122 for 5 nights
+                  - generic [ref=e305]: Free cancellation
+                - generic [ref=e306]:
+                  - generic:
+                    - generic: 4.95 out of 5 average rating, 274 reviews
+                    - generic:
+                      - img
+                    - generic: 4.95 (274)
+          - group [ref=e329]:
+            - link [ref=e330] [cursor=pointer]:
+              - /url: /rooms/1686469575954529414?search_mode=regular_search&adults=1&check_in=2026-07-22&check_out=2026-07-27&children=0&infants=0&pets=0&photo_id=2635346461&source_impression_id=p3_1780336881_P36LW2IhFwCMGAb0&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e331]:
+              - group [ref=e334]:
+                - generic:
+                  - button [ref=e336] [cursor=pointer]:
+                    - img [ref=e337]
+                  - generic:
+                    - button [disabled] [ref=e340] [cursor=pointer]:
+                      - img [ref=e342]
+                    - button [ref=e345] [cursor=pointer]:
+                      - img [ref=e347]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e353]:
+                  - link [ref=e354] [cursor=pointer]:
+                    - /url: /rooms/1686469575954529414?search_mode=regular_search&adults=1&check_in=2026-07-22&check_out=2026-07-27&children=0&infants=0&pets=0&photo_id=2635346461&source_impression_id=p3_1780336881_P36LW2IhFwCMGAb0&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e357]
+                  - link [ref=e358] [cursor=pointer]:
+                    - /url: /rooms/1686469575954529414?search_mode=regular_search&adults=1&check_in=2026-07-22&check_out=2026-07-27&children=0&infants=0&pets=0&photo_id=2635346461&source_impression_id=p3_1780336881_P36LW2IhFwCMGAb0&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e359] [cursor=pointer]:
+                    - /url: /rooms/1686469575954529414?search_mode=regular_search&adults=1&check_in=2026-07-22&check_out=2026-07-27&children=0&infants=0&pets=0&photo_id=2635346461&source_impression_id=p3_1780336881_P36LW2IhFwCMGAb0&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e360] [cursor=pointer]:
+                    - /url: /rooms/1686469575954529414?search_mode=regular_search&adults=1&check_in=2026-07-22&check_out=2026-07-27&children=0&infants=0&pets=0&photo_id=2635346461&source_impression_id=p3_1780336881_P36LW2IhFwCMGAb0&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e361] [cursor=pointer]:
+                    - /url: /rooms/1686469575954529414?search_mode=regular_search&adults=1&check_in=2026-07-22&check_out=2026-07-27&children=0&infants=0&pets=0&photo_id=2635346461&source_impression_id=p3_1780336881_P36LW2IhFwCMGAb0&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e362] [cursor=pointer]:
+                    - /url: /rooms/1686469575954529414?search_mode=regular_search&adults=1&check_in=2026-07-22&check_out=2026-07-27&children=0&infants=0&pets=0&photo_id=2635346461&source_impression_id=p3_1780336881_P36LW2IhFwCMGAb0&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e363]:
+                - generic [ref=e364]: Flat in West New York
+                - generic [ref=e366]: City Roots
+                - generic [ref=e367]:
+                  - generic [ref=e368]:
+                    - generic [ref=e369]: 2 queen beds
+                    - generic [ref=e370]: 2 queen beds
+                  - generic [ref=e371]:
+                    - generic [ref=e372]: 1 bathroom
+                    - generic [ref=e373]: ","
+                    - generic [ref=e374]: ·
+                    - generic [ref=e375]: 1 bathroom
+                - generic [ref=e377]:
+                  - generic [ref=e378]: 22–27 Jul
+                  - generic [ref=e379]: 22–27 Jul
+                - generic [ref=e380]:
+                  - generic [ref=e383]:
+                    - button [ref=e388] [cursor=pointer]:
+                      - text: ₹95,544
+                      - generic [ref=e389]: Show price breakdown
+                    - generic [ref=e391]: for 5 nights
+                    - generic [ref=e392]: ₹95,544 for 5 nights
+                  - generic [ref=e394]: Free cancellation
+                - generic [ref=e395]:
+                  - generic:
+                    - generic: 5.0 out of 5 average rating, 3 reviews
+                    - generic:
+                      - img
+                    - generic: 5.0 (3)
+          - group [ref=e418]:
+            - link [ref=e419] [cursor=pointer]:
+              - /url: /rooms/1496474668256121537?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2613875089&source_impression_id=p3_1780336881_P3oLAsuxjFtXa3ev&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e420]:
+              - group [ref=e423]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                        - generic: Top guest favourite
+                        - generic: Guest favourite
+                    - button [ref=e425] [cursor=pointer]:
+                      - img [ref=e426]
+                  - generic:
+                    - button [disabled] [ref=e429] [cursor=pointer]:
+                      - img [ref=e431]
+                    - button [ref=e434] [cursor=pointer]:
+                      - img [ref=e436]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e442]:
+                  - link [ref=e443] [cursor=pointer]:
+                    - /url: /rooms/1496474668256121537?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2613875089&source_impression_id=p3_1780336881_P3oLAsuxjFtXa3ev&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e446]
+                  - link [ref=e447] [cursor=pointer]:
+                    - /url: /rooms/1496474668256121537?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2613875089&source_impression_id=p3_1780336881_P3oLAsuxjFtXa3ev&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e448] [cursor=pointer]:
+                    - /url: /rooms/1496474668256121537?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2613875089&source_impression_id=p3_1780336881_P3oLAsuxjFtXa3ev&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e449] [cursor=pointer]:
+                    - /url: /rooms/1496474668256121537?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2613875089&source_impression_id=p3_1780336881_P3oLAsuxjFtXa3ev&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e450] [cursor=pointer]:
+                    - /url: /rooms/1496474668256121537?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2613875089&source_impression_id=p3_1780336881_P3oLAsuxjFtXa3ev&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e451] [cursor=pointer]:
+                    - /url: /rooms/1496474668256121537?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2613875089&source_impression_id=p3_1780336881_P3oLAsuxjFtXa3ev&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e452]:
+                - generic [ref=e453]: Flat in New York City
+                - generic [ref=e455]: Manhattan Group Stay | 4BR Unique Era-Themed Home
+                - generic [ref=e456]:
+                  - generic [ref=e457]:
+                    - generic [ref=e458]: 4 bedrooms
+                    - generic [ref=e459]: 4 bedrooms
+                  - generic [ref=e460]:
+                    - generic [ref=e461]: 10 beds
+                    - generic [ref=e462]: ","
+                    - generic [ref=e463]: ·
+                    - generic [ref=e464]: 10 beds
+                  - generic [ref=e465]:
+                    - generic [ref=e466]: 2 bathrooms
+                    - generic [ref=e467]: ","
+                    - generic [ref=e468]: ·
+                    - generic [ref=e469]: 2 bathrooms
+                - generic [ref=e471]:
+                  - generic [ref=e472]: 7–12 Jun
+                  - generic [ref=e473]: 7–12 Jun
+                - generic [ref=e474]:
+                  - generic [ref=e479]:
+                    - generic [ref=e480]:
+                      - generic [ref=e481]: ₹4,63,618
+                      - button [ref=e484] [cursor=pointer]:
+                        - text: ₹3,75,447
+                        - generic [ref=e485]: Show price breakdown
+                    - generic [ref=e488]: for 5 nights
+                  - generic [ref=e490]: Free cancellation
+                - generic [ref=e491]:
+                  - generic:
+                    - generic: 5.0 out of 5 average rating, 6 reviews
+                    - generic:
+                      - img
+                    - generic: 5.0 (6)
+          - group [ref=e514]:
+            - link [ref=e515] [cursor=pointer]:
+              - /url: /rooms/1404403902815216178?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36clcIyhjKUHcEh&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e516]:
+              - group [ref=e519]:
+                - generic:
+                  - button [ref=e521] [cursor=pointer]:
+                    - img [ref=e522]
+                  - generic:
+                    - button [disabled] [ref=e525] [cursor=pointer]:
+                      - img [ref=e527]
+                    - button [ref=e530] [cursor=pointer]:
+                      - img [ref=e532]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e538]:
+                  - link [ref=e539] [cursor=pointer]:
+                    - /url: /rooms/1404403902815216178?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36clcIyhjKUHcEh&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e542]
+                  - link [ref=e543] [cursor=pointer]:
+                    - /url: /rooms/1404403902815216178?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36clcIyhjKUHcEh&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e544] [cursor=pointer]:
+                    - /url: /rooms/1404403902815216178?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36clcIyhjKUHcEh&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e545] [cursor=pointer]:
+                    - /url: /rooms/1404403902815216178?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36clcIyhjKUHcEh&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e546] [cursor=pointer]:
+                    - /url: /rooms/1404403902815216178?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36clcIyhjKUHcEh&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e547] [cursor=pointer]:
+                    - /url: /rooms/1404403902815216178?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36clcIyhjKUHcEh&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e548]:
+                - generic [ref=e549]: Hotel in New York City
+                - generic [ref=e551]: Close to Carnegie Hall with On-site Bar & Gym
+                - generic [ref=e552]:
+                  - generic [ref=e553]:
+                    - generic [ref=e554]: 1 bedroom
+                    - generic [ref=e555]: 1 bedroom
+                  - generic [ref=e556]:
+                    - generic [ref=e557]: 1 king bed
+                    - generic [ref=e558]: ","
+                    - generic [ref=e559]: ·
+                    - generic [ref=e560]: 1 king bed
+                  - generic [ref=e561]:
+                    - generic [ref=e562]: 1 bathroom
+                    - generic [ref=e563]: ","
+                    - generic [ref=e564]: ·
+                    - generic [ref=e565]: 1 bathroom
+                - generic [ref=e567]:
+                  - generic [ref=e568]: 7–12 Jun
+                  - generic [ref=e569]: 7–12 Jun
+                - generic [ref=e570]:
+                  - generic [ref=e573]:
+                    - button [ref=e578] [cursor=pointer]:
+                      - text: ₹1,70,512
+                      - generic [ref=e579]: Show price breakdown
+                    - generic [ref=e581]: for 5 nights
+                    - generic [ref=e582]: ₹1,70,512 for 5 nights
+                  - generic [ref=e584]: Free cancellation
+                - generic [ref=e585]:
+                  - generic:
+                    - generic: 4.76 out of 5 average rating, 34 reviews
+                    - generic:
+                      - img
+                    - generic: 4.76 (34)
+          - group [ref=e608]:
+            - link [ref=e609] [cursor=pointer]:
+              - /url: /rooms/1682798858993653199?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2627886481&source_impression_id=p3_1780336881_P34jRhUoCtgc5C7P&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e610]:
+              - group [ref=e613]:
+                - generic:
+                  - button [ref=e615] [cursor=pointer]:
+                    - img [ref=e616]
+                  - generic:
+                    - button [disabled] [ref=e619] [cursor=pointer]:
+                      - img [ref=e621]
+                    - button [ref=e624] [cursor=pointer]:
+                      - img [ref=e626]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e632]:
+                  - link [ref=e633] [cursor=pointer]:
+                    - /url: /rooms/1682798858993653199?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2627886481&source_impression_id=p3_1780336881_P34jRhUoCtgc5C7P&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e636]
+                  - link [ref=e637] [cursor=pointer]:
+                    - /url: /rooms/1682798858993653199?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2627886481&source_impression_id=p3_1780336881_P34jRhUoCtgc5C7P&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e638] [cursor=pointer]:
+                    - /url: /rooms/1682798858993653199?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2627886481&source_impression_id=p3_1780336881_P34jRhUoCtgc5C7P&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e639] [cursor=pointer]:
+                    - /url: /rooms/1682798858993653199?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2627886481&source_impression_id=p3_1780336881_P34jRhUoCtgc5C7P&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e640] [cursor=pointer]:
+                    - /url: /rooms/1682798858993653199?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2627886481&source_impression_id=p3_1780336881_P34jRhUoCtgc5C7P&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e641] [cursor=pointer]:
+                    - /url: /rooms/1682798858993653199?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2627886481&source_impression_id=p3_1780336881_P34jRhUoCtgc5C7P&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e642]:
+                - generic [ref=e643]: Flat in Bayonne
+                - generic [ref=e645]: Spacious 3BR Near NYC & MetLife | 5 Beds + Parking
+                - generic [ref=e646]:
+                  - generic [ref=e647]:
+                    - generic [ref=e648]: 3 bedrooms
+                    - generic [ref=e649]: 3 bedrooms
+                  - generic [ref=e650]:
+                    - generic [ref=e651]: 5 beds
+                    - generic [ref=e652]: ","
+                    - generic [ref=e653]: ·
+                    - generic [ref=e654]: 5 beds
+                  - generic [ref=e655]:
+                    - generic [ref=e656]: 1 bathroom
+                    - generic [ref=e657]: ","
+                    - generic [ref=e658]: ·
+                    - generic [ref=e659]: 1 bathroom
+                - generic [ref=e661]:
+                  - generic [ref=e662]: 7–12 Jun
+                  - generic [ref=e663]: 7–12 Jun
+                - generic [ref=e667]:
+                  - button [ref=e672] [cursor=pointer]:
+                    - text: ₹1,22,116
+                    - generic [ref=e673]: Show price breakdown
+                  - generic [ref=e675]: for 5 nights
+                  - generic [ref=e676]: ₹1,22,116 for 5 nights
+                - generic [ref=e677]:
+                  - generic:
+                    - generic: 5.0 out of 5 average rating, 4 reviews
+                    - generic:
+                      - img
+                    - generic: 5.0 (4)
+          - group [ref=e700]:
+            - link [ref=e701] [cursor=pointer]:
+              - /url: /rooms/931216252915282640?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=1737312289&source_impression_id=p3_1780336881_P3zhLoI8iIc814ZR&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e702]:
+              - group [ref=e705]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                        - generic: Top guest favourite
+                        - generic: Guest favourite
+                    - button [ref=e707] [cursor=pointer]:
+                      - img [ref=e708]
+                  - generic:
+                    - button [disabled] [ref=e711] [cursor=pointer]:
+                      - img [ref=e713]
+                    - button [ref=e716] [cursor=pointer]:
+                      - img [ref=e718]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e724]:
+                  - link [ref=e725] [cursor=pointer]:
+                    - /url: /rooms/931216252915282640?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=1737312289&source_impression_id=p3_1780336881_P3zhLoI8iIc814ZR&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e728]
+                  - link [ref=e729] [cursor=pointer]:
+                    - /url: /rooms/931216252915282640?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=1737312289&source_impression_id=p3_1780336881_P3zhLoI8iIc814ZR&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e730] [cursor=pointer]:
+                    - /url: /rooms/931216252915282640?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=1737312289&source_impression_id=p3_1780336881_P3zhLoI8iIc814ZR&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e731] [cursor=pointer]:
+                    - /url: /rooms/931216252915282640?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=1737312289&source_impression_id=p3_1780336881_P3zhLoI8iIc814ZR&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e732] [cursor=pointer]:
+                    - /url: /rooms/931216252915282640?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=1737312289&source_impression_id=p3_1780336881_P3zhLoI8iIc814ZR&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e733] [cursor=pointer]:
+                    - /url: /rooms/931216252915282640?search_mode=regular_search&adults=1&category_tag=Tag%3A8678&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=1737312289&source_impression_id=p3_1780336881_P3zhLoI8iIc814ZR&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e734]:
+                - generic [ref=e735]: Room in New York City
+                - generic [ref=e737]: A comfy room away from home.
+                - generic [ref=e738]:
+                  - generic [ref=e739]:
+                    - generic [ref=e740]: 1 bed
+                    - generic [ref=e741]: 1 bed
+                  - generic [ref=e742]:
+                    - generic [ref=e743]: 1 bathroom
+                    - generic [ref=e744]: ","
+                    - generic [ref=e745]: ·
+                    - generic [ref=e746]: 1 bathroom
+                - generic [ref=e748]:
+                  - generic [ref=e749]: 7–12 Jun
+                  - generic [ref=e750]: 7–12 Jun
+                - generic [ref=e751]:
+                  - generic [ref=e754]:
+                    - button [ref=e759] [cursor=pointer]:
+                      - text: ₹48,657
+                      - generic [ref=e760]: Show price breakdown
+                    - generic [ref=e762]: for 5 nights
+                    - generic [ref=e763]: ₹48,657 for 5 nights
+                  - generic [ref=e765]: Free cancellation
+                - generic [ref=e766]:
+                  - generic:
+                    - generic: 4.97 out of 5 average rating, 319 reviews
+                    - generic:
+                      - img
+                    - generic: 4.97 (319)
+          - group [ref=e789]:
+            - link [ref=e790] [cursor=pointer]:
+              - /url: /rooms/1496456215702140002?search_mode=regular_search&adults=1&check_in=2026-06-19&check_out=2026-06-24&children=0&infants=0&pets=0&photo_id=2613628799&source_impression_id=p3_1780336881_P3jLCnTgjjxIsxhA&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e791]:
+              - group [ref=e794]:
+                - generic:
+                  - button [ref=e796] [cursor=pointer]:
+                    - img [ref=e797]
+                  - generic:
+                    - button [disabled] [ref=e800] [cursor=pointer]:
+                      - img [ref=e802]
+                    - button [ref=e805] [cursor=pointer]:
+                      - img [ref=e807]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e813]:
+                  - link [ref=e814] [cursor=pointer]:
+                    - /url: /rooms/1496456215702140002?search_mode=regular_search&adults=1&check_in=2026-06-19&check_out=2026-06-24&children=0&infants=0&pets=0&photo_id=2613628799&source_impression_id=p3_1780336881_P3jLCnTgjjxIsxhA&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e817]
+                  - link [ref=e818] [cursor=pointer]:
+                    - /url: /rooms/1496456215702140002?search_mode=regular_search&adults=1&check_in=2026-06-19&check_out=2026-06-24&children=0&infants=0&pets=0&photo_id=2613628799&source_impression_id=p3_1780336881_P3jLCnTgjjxIsxhA&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e819] [cursor=pointer]:
+                    - /url: /rooms/1496456215702140002?search_mode=regular_search&adults=1&check_in=2026-06-19&check_out=2026-06-24&children=0&infants=0&pets=0&photo_id=2613628799&source_impression_id=p3_1780336881_P3jLCnTgjjxIsxhA&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e820] [cursor=pointer]:
+                    - /url: /rooms/1496456215702140002?search_mode=regular_search&adults=1&check_in=2026-06-19&check_out=2026-06-24&children=0&infants=0&pets=0&photo_id=2613628799&source_impression_id=p3_1780336881_P3jLCnTgjjxIsxhA&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e821] [cursor=pointer]:
+                    - /url: /rooms/1496456215702140002?search_mode=regular_search&adults=1&check_in=2026-06-19&check_out=2026-06-24&children=0&infants=0&pets=0&photo_id=2613628799&source_impression_id=p3_1780336881_P3jLCnTgjjxIsxhA&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e822] [cursor=pointer]:
+                    - /url: /rooms/1496456215702140002?search_mode=regular_search&adults=1&check_in=2026-06-19&check_out=2026-06-24&children=0&infants=0&pets=0&photo_id=2613628799&source_impression_id=p3_1780336881_P3jLCnTgjjxIsxhA&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e823]:
+                - generic [ref=e824]: Flat in New York City
+                - generic [ref=e826]: Manhattan Group Stay | Private Yard + Theater Room
+                - generic [ref=e827]:
+                  - generic [ref=e828]:
+                    - generic [ref=e829]: 3 bedrooms
+                    - generic [ref=e830]: 3 bedrooms
+                  - generic [ref=e831]:
+                    - generic [ref=e832]: 6 beds
+                    - generic [ref=e833]: ","
+                    - generic [ref=e834]: ·
+                    - generic [ref=e835]: 6 beds
+                  - generic [ref=e836]:
+                    - generic [ref=e837]: 2 bathrooms
+                    - generic [ref=e838]: ","
+                    - generic [ref=e839]: ·
+                    - generic [ref=e840]: 2 bathrooms
+                - generic [ref=e842]:
+                  - generic [ref=e843]: 19–24 Jun
+                  - generic [ref=e844]: 19–24 Jun
+                - generic [ref=e845]:
+                  - generic [ref=e848]:
+                    - button [ref=e853] [cursor=pointer]:
+                      - text: ₹3,87,227
+                      - generic [ref=e854]: Show price breakdown
+                    - generic [ref=e856]: for 5 nights
+                    - generic [ref=e857]: ₹3,87,227 for 5 nights
+                  - generic [ref=e859]: Free cancellation
+                - generic [ref=e860]:
+                  - generic:
+                    - generic: New place to stay
+                    - generic:
+                      - img
+                    - generic: New
+          - group [ref=e883]:
+            - link [ref=e884] [cursor=pointer]:
+              - /url: /rooms/1496483566620917012?search_mode=regular_search&adults=1&check_in=2026-06-28&check_out=2026-07-03&children=0&infants=0&pets=0&photo_id=2613815186&source_impression_id=p3_1780336881_P3UYi0Ocb2e4eJ6N&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e885]:
+              - group [ref=e888]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Guest favourite
+                        - generic: Guest favourite
+                    - button [ref=e890] [cursor=pointer]:
+                      - img [ref=e891]
+                  - generic:
+                    - button [disabled] [ref=e894] [cursor=pointer]:
+                      - img [ref=e896]
+                    - button [ref=e899] [cursor=pointer]:
+                      - img [ref=e901]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e907]:
+                  - link [ref=e908] [cursor=pointer]:
+                    - /url: /rooms/1496483566620917012?search_mode=regular_search&adults=1&check_in=2026-06-28&check_out=2026-07-03&children=0&infants=0&pets=0&photo_id=2613815186&source_impression_id=p3_1780336881_P3UYi0Ocb2e4eJ6N&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e911]
+                  - link [ref=e912] [cursor=pointer]:
+                    - /url: /rooms/1496483566620917012?search_mode=regular_search&adults=1&check_in=2026-06-28&check_out=2026-07-03&children=0&infants=0&pets=0&photo_id=2613815186&source_impression_id=p3_1780336881_P3UYi0Ocb2e4eJ6N&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e913] [cursor=pointer]:
+                    - /url: /rooms/1496483566620917012?search_mode=regular_search&adults=1&check_in=2026-06-28&check_out=2026-07-03&children=0&infants=0&pets=0&photo_id=2613815186&source_impression_id=p3_1780336881_P3UYi0Ocb2e4eJ6N&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e914] [cursor=pointer]:
+                    - /url: /rooms/1496483566620917012?search_mode=regular_search&adults=1&check_in=2026-06-28&check_out=2026-07-03&children=0&infants=0&pets=0&photo_id=2613815186&source_impression_id=p3_1780336881_P3UYi0Ocb2e4eJ6N&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e915] [cursor=pointer]:
+                    - /url: /rooms/1496483566620917012?search_mode=regular_search&adults=1&check_in=2026-06-28&check_out=2026-07-03&children=0&infants=0&pets=0&photo_id=2613815186&source_impression_id=p3_1780336881_P3UYi0Ocb2e4eJ6N&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e916] [cursor=pointer]:
+                    - /url: /rooms/1496483566620917012?search_mode=regular_search&adults=1&check_in=2026-06-28&check_out=2026-07-03&children=0&infants=0&pets=0&photo_id=2613815186&source_impression_id=p3_1780336881_P3UYi0Ocb2e4eJ6N&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e917]:
+                - generic [ref=e918]: Flat in New York City
+                - generic [ref=e920]: Private Manhattan Retreat | Sauna, Yard + King Bed
+                - generic [ref=e921]:
+                  - generic [ref=e922]:
+                    - generic [ref=e923]: 1 bedroom
+                    - generic [ref=e924]: 1 bedroom
+                  - generic [ref=e925]:
+                    - generic [ref=e926]: 2 beds
+                    - generic [ref=e927]: ","
+                    - generic [ref=e928]: ·
+                    - generic [ref=e929]: 2 beds
+                  - generic [ref=e930]:
+                    - generic [ref=e931]: 1 bathroom
+                    - generic [ref=e932]: ","
+                    - generic [ref=e933]: ·
+                    - generic [ref=e934]: 1 bathroom
+                - generic [ref=e936]:
+                  - generic [ref=e937]: 28 Jun – 3 Jul
+                  - generic [ref=e938]: 28 Jun – 3 Jul
+                - generic [ref=e939]:
+                  - generic [ref=e942]:
+                    - button [ref=e947] [cursor=pointer]:
+                      - text: ₹2,90,706
+                      - generic [ref=e948]: Show price breakdown
+                    - generic [ref=e950]: for 5 nights
+                    - generic [ref=e951]: ₹2,90,706 for 5 nights
+                  - generic [ref=e953]: Free cancellation
+                - generic [ref=e954]:
+                  - generic:
+                    - generic: 5.0 out of 5 average rating, 6 reviews
+                    - generic:
+                      - img
+                    - generic: 5.0 (6)
+          - group [ref=e977]:
+            - link [ref=e978] [cursor=pointer]:
+              - /url: /rooms/1653435243623530221?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&photo_id=2571980489&source_impression_id=p3_1780336881_P3RxIyiiF_T8VXAO&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e979]:
+              - group [ref=e982]:
+                - generic:
+                  - button [ref=e984] [cursor=pointer]:
+                    - img [ref=e985]
+                  - generic:
+                    - button [disabled] [ref=e988] [cursor=pointer]:
+                      - img [ref=e990]
+                    - button [ref=e993] [cursor=pointer]:
+                      - img [ref=e995]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1001]:
+                  - link [ref=e1002] [cursor=pointer]:
+                    - /url: /rooms/1653435243623530221?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&photo_id=2571980489&source_impression_id=p3_1780336881_P3RxIyiiF_T8VXAO&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1005]
+                  - link [ref=e1006] [cursor=pointer]:
+                    - /url: /rooms/1653435243623530221?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&photo_id=2571980489&source_impression_id=p3_1780336881_P3RxIyiiF_T8VXAO&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1007] [cursor=pointer]:
+                    - /url: /rooms/1653435243623530221?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&photo_id=2571980489&source_impression_id=p3_1780336881_P3RxIyiiF_T8VXAO&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1008] [cursor=pointer]:
+                    - /url: /rooms/1653435243623530221?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&photo_id=2571980489&source_impression_id=p3_1780336881_P3RxIyiiF_T8VXAO&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1009] [cursor=pointer]:
+                    - /url: /rooms/1653435243623530221?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&photo_id=2571980489&source_impression_id=p3_1780336881_P3RxIyiiF_T8VXAO&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1010] [cursor=pointer]:
+                    - /url: /rooms/1653435243623530221?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&photo_id=2571980489&source_impression_id=p3_1780336881_P3RxIyiiF_T8VXAO&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1011]:
+                - generic [ref=e1012]: Flat in New York City
+                - generic [ref=e1014]: Modern Studio Apartment, 1 Queen - FiDi
+                - generic [ref=e1015]:
+                  - generic [ref=e1016]:
+                    - generic [ref=e1017]: 1 queen bed
+                    - generic [ref=e1018]: 1 queen bed
+                  - generic [ref=e1019]:
+                    - generic [ref=e1020]: 1 bathroom
+                    - generic [ref=e1021]: ","
+                    - generic [ref=e1022]: ·
+                    - generic [ref=e1023]: 1 bathroom
+                - generic [ref=e1025]:
+                  - generic [ref=e1026]: 1–6 Jun
+                  - generic [ref=e1027]: 1–6 Jun
+                - generic [ref=e1031]:
+                  - button [ref=e1036] [cursor=pointer]:
+                    - text: ₹1,98,079
+                    - generic [ref=e1037]: Show price breakdown
+                  - generic [ref=e1039]: for 5 nights
+                  - generic [ref=e1040]: ₹1,98,079 for 5 nights
+                - generic [ref=e1041]:
+                  - generic:
+                    - generic: 4.97 out of 5 average rating, 29 reviews
+                    - generic:
+                      - img
+                    - generic: 4.97 (29)
+          - group [ref=e1064]:
+            - link [ref=e1065] [cursor=pointer]:
+              - /url: /rooms/1629361003545337184?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2623926772&source_impression_id=p3_1780336881_P32fvjStz_9epRMQ&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1066]:
+              - group [ref=e1069]:
+                - generic:
+                  - button [ref=e1071] [cursor=pointer]:
+                    - img [ref=e1072]
+                  - generic:
+                    - button [disabled] [ref=e1075] [cursor=pointer]:
+                      - img [ref=e1077]
+                    - button [ref=e1080] [cursor=pointer]:
+                      - img [ref=e1082]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1088]:
+                  - link [ref=e1089] [cursor=pointer]:
+                    - /url: /rooms/1629361003545337184?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2623926772&source_impression_id=p3_1780336881_P32fvjStz_9epRMQ&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1092]
+                  - link [ref=e1093] [cursor=pointer]:
+                    - /url: /rooms/1629361003545337184?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2623926772&source_impression_id=p3_1780336881_P32fvjStz_9epRMQ&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1094] [cursor=pointer]:
+                    - /url: /rooms/1629361003545337184?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2623926772&source_impression_id=p3_1780336881_P32fvjStz_9epRMQ&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1095] [cursor=pointer]:
+                    - /url: /rooms/1629361003545337184?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2623926772&source_impression_id=p3_1780336881_P32fvjStz_9epRMQ&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1096] [cursor=pointer]:
+                    - /url: /rooms/1629361003545337184?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2623926772&source_impression_id=p3_1780336881_P32fvjStz_9epRMQ&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1097] [cursor=pointer]:
+                    - /url: /rooms/1629361003545337184?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&photo_id=2623926772&source_impression_id=p3_1780336881_P32fvjStz_9epRMQ&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1098]:
+                - generic [ref=e1099]: Home in Brooklyn
+                - generic [ref=e1101]: Brooklyn perfect 3 Bedrooms
+                - generic [ref=e1102]:
+                  - generic [ref=e1103]:
+                    - generic [ref=e1104]: 3 bedrooms
+                    - generic [ref=e1105]: 3 bedrooms
+                  - generic [ref=e1106]:
+                    - generic [ref=e1107]: 7 beds
+                    - generic [ref=e1108]: ","
+                    - generic [ref=e1109]: ·
+                    - generic [ref=e1110]: 7 beds
+                  - generic [ref=e1111]:
+                    - generic [ref=e1112]: 2 bathrooms
+                    - generic [ref=e1113]: ","
+                    - generic [ref=e1114]: ·
+                    - generic [ref=e1115]: 2 bathrooms
+                - generic [ref=e1117]:
+                  - generic [ref=e1118]: 7–12 Jun
+                  - generic [ref=e1119]: 7–12 Jun
+                - generic [ref=e1120]:
+                  - generic [ref=e1123]:
+                    - button [ref=e1128] [cursor=pointer]:
+                      - text: ₹2,45,603
+                      - generic [ref=e1129]: Show price breakdown
+                    - generic [ref=e1131]: for 5 nights
+                    - generic [ref=e1132]: ₹2,45,603 for 5 nights
+                  - generic [ref=e1134]: Free cancellation
+          - group [ref=e1157]:
+            - link [ref=e1158] [cursor=pointer]:
+              - /url: /rooms/1640152689675076185?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36wgAX_0ZOkmaVH&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1159]:
+              - group [ref=e1162]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Superhost
+                        - generic: Superhost
+                    - button [ref=e1164] [cursor=pointer]:
+                      - img [ref=e1165]
+                  - generic:
+                    - button [disabled] [ref=e1168] [cursor=pointer]:
+                      - img [ref=e1170]
+                    - button [ref=e1173] [cursor=pointer]:
+                      - img [ref=e1175]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1181]:
+                  - link [ref=e1182] [cursor=pointer]:
+                    - /url: /rooms/1640152689675076185?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36wgAX_0ZOkmaVH&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1185]
+                  - link [ref=e1186] [cursor=pointer]:
+                    - /url: /rooms/1640152689675076185?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36wgAX_0ZOkmaVH&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1187] [cursor=pointer]:
+                    - /url: /rooms/1640152689675076185?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36wgAX_0ZOkmaVH&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1188] [cursor=pointer]:
+                    - /url: /rooms/1640152689675076185?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36wgAX_0ZOkmaVH&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1189] [cursor=pointer]:
+                    - /url: /rooms/1640152689675076185?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36wgAX_0ZOkmaVH&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1190] [cursor=pointer]:
+                    - /url: /rooms/1640152689675076185?search_mode=regular_search&adults=1&check_in=2026-06-07&check_out=2026-06-12&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P36wgAX_0ZOkmaVH&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1191]:
+                - generic [ref=e1192]: Place to stay in North Bergen
+                - generic [ref=e1194]: Vintage Parisian PrivateRoom~NearManhattan&MetLife
+                - generic [ref=e1195]:
+                  - generic [ref=e1196]:
+                    - generic [ref=e1197]: 1 bedroom
+                    - generic [ref=e1198]: 1 bedroom
+                  - generic [ref=e1199]:
+                    - generic [ref=e1200]: 1 queen bed
+                    - generic [ref=e1201]: ","
+                    - generic [ref=e1202]: ·
+                    - generic [ref=e1203]: 1 queen bed
+                  - generic [ref=e1204]:
+                    - generic [ref=e1205]: 1 bathroom
+                    - generic [ref=e1206]: ","
+                    - generic [ref=e1207]: ·
+                    - generic [ref=e1208]: 1 bathroom
+                - generic [ref=e1210]:
+                  - generic [ref=e1211]: 7–12 Jun
+                  - generic [ref=e1212]: 7–12 Jun
+                - generic [ref=e1213]:
+                  - generic [ref=e1218]:
+                    - generic [ref=e1219]:
+                      - generic [ref=e1220]: ₹65,279
+                      - button [ref=e1223] [cursor=pointer]:
+                        - text: ₹35,828
+                        - generic [ref=e1224]: Show price breakdown
+                    - generic [ref=e1227]: for 5 nights
+                  - generic [ref=e1229]: Free cancellation
+                - generic [ref=e1230]:
+                  - generic:
+                    - generic: 5.0 out of 5 average rating, 5 reviews
+                    - generic:
+                      - img
+                    - generic: 5.0 (5)
+          - group [ref=e1253]:
+            - link [ref=e1254] [cursor=pointer]:
+              - /url: /rooms/1689171566663741260?search_mode=regular_search&adults=1&check_in=2026-07-05&check_out=2026-07-10&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3EsFLchhTu4tMqk&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1255]:
+              - group [ref=e1258]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Superhost
+                        - generic: Superhost
+                    - button [ref=e1260] [cursor=pointer]:
+                      - img [ref=e1261]
+                  - generic:
+                    - button [disabled] [ref=e1264] [cursor=pointer]:
+                      - img [ref=e1266]
+                    - button [ref=e1269] [cursor=pointer]:
+                      - img [ref=e1271]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1277]:
+                  - link [ref=e1278] [cursor=pointer]:
+                    - /url: /rooms/1689171566663741260?search_mode=regular_search&adults=1&check_in=2026-07-05&check_out=2026-07-10&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3EsFLchhTu4tMqk&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1281]
+                  - link [ref=e1282] [cursor=pointer]:
+                    - /url: /rooms/1689171566663741260?search_mode=regular_search&adults=1&check_in=2026-07-05&check_out=2026-07-10&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3EsFLchhTu4tMqk&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1283] [cursor=pointer]:
+                    - /url: /rooms/1689171566663741260?search_mode=regular_search&adults=1&check_in=2026-07-05&check_out=2026-07-10&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3EsFLchhTu4tMqk&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1284] [cursor=pointer]:
+                    - /url: /rooms/1689171566663741260?search_mode=regular_search&adults=1&check_in=2026-07-05&check_out=2026-07-10&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3EsFLchhTu4tMqk&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1285] [cursor=pointer]:
+                    - /url: /rooms/1689171566663741260?search_mode=regular_search&adults=1&check_in=2026-07-05&check_out=2026-07-10&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3EsFLchhTu4tMqk&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1286] [cursor=pointer]:
+                    - /url: /rooms/1689171566663741260?search_mode=regular_search&adults=1&check_in=2026-07-05&check_out=2026-07-10&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3EsFLchhTu4tMqk&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1287]:
+                - generic [ref=e1288]: Tiny home in Newark
+                - generic [ref=e1290]: Your mini room
+                - generic [ref=e1291]:
+                  - generic [ref=e1292]:
+                    - generic [ref=e1293]: 1 bedroom
+                    - generic [ref=e1294]: 1 bedroom
+                  - generic [ref=e1295]:
+                    - generic [ref=e1296]: 1 bed
+                    - generic [ref=e1297]: ","
+                    - generic [ref=e1298]: ·
+                    - generic [ref=e1299]: 1 bed
+                  - generic [ref=e1300]:
+                    - generic [ref=e1301]: 1.5 bathrooms
+                    - generic [ref=e1302]: ","
+                    - generic [ref=e1303]: ·
+                    - generic [ref=e1304]: 1.5 bathrooms
+                - generic [ref=e1306]:
+                  - generic [ref=e1307]: 5–10 Jul
+                  - generic [ref=e1308]: 5–10 Jul
+                - generic [ref=e1309]:
+                  - generic [ref=e1312]:
+                    - button [ref=e1317] [cursor=pointer]:
+                      - text: ₹25,545
+                      - generic [ref=e1318]: Show price breakdown
+                    - generic [ref=e1320]: for 5 nights
+                    - generic [ref=e1321]: ₹25,545 for 5 nights
+                  - generic [ref=e1323]: Free cancellation
+                - generic [ref=e1324]:
+                  - generic:
+                    - generic: New place to stay
+                    - generic:
+                      - img
+                    - generic: New
+          - group [ref=e1347]:
+            - link [ref=e1348] [cursor=pointer]:
+              - /url: /rooms/1010503905929192028?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3hQIVTDcP2-MH5T&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1349]:
+              - group [ref=e1352]:
+                - generic:
+                  - button [ref=e1354] [cursor=pointer]:
+                    - img [ref=e1355]
+                  - generic:
+                    - button [disabled] [ref=e1358] [cursor=pointer]:
+                      - img [ref=e1360]
+                    - button [ref=e1363] [cursor=pointer]:
+                      - img [ref=e1365]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1371]:
+                  - link [ref=e1372] [cursor=pointer]:
+                    - /url: /rooms/1010503905929192028?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3hQIVTDcP2-MH5T&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1375]
+                  - link [ref=e1376] [cursor=pointer]:
+                    - /url: /rooms/1010503905929192028?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3hQIVTDcP2-MH5T&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1377] [cursor=pointer]:
+                    - /url: /rooms/1010503905929192028?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3hQIVTDcP2-MH5T&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1378] [cursor=pointer]:
+                    - /url: /rooms/1010503905929192028?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3hQIVTDcP2-MH5T&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1379] [cursor=pointer]:
+                    - /url: /rooms/1010503905929192028?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3hQIVTDcP2-MH5T&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1380] [cursor=pointer]:
+                    - /url: /rooms/1010503905929192028?search_mode=regular_search&adults=1&check_in=2026-06-01&check_out=2026-06-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3hQIVTDcP2-MH5T&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1381]:
+                - generic [ref=e1382]: Hotel in New York City
+                - generic [ref=e1384]: Steps to Times Square | Free Breakfast & Fitness
+                - generic [ref=e1385]:
+                  - generic [ref=e1386]:
+                    - generic [ref=e1387]: 1 bedroom
+                    - generic [ref=e1388]: 1 bedroom
+                  - generic [ref=e1389]:
+                    - generic [ref=e1390]: 1 king bed
+                    - generic [ref=e1391]: ","
+                    - generic [ref=e1392]: ·
+                    - generic [ref=e1393]: 1 king bed
+                  - generic [ref=e1394]:
+                    - generic [ref=e1395]: 1 bathroom
+                    - generic [ref=e1396]: ","
+                    - generic [ref=e1397]: ·
+                    - generic [ref=e1398]: 1 bathroom
+                - generic [ref=e1400]:
+                  - generic [ref=e1401]: 1–6 Jun
+                  - generic [ref=e1402]: 1–6 Jun
+                - generic [ref=e1403]:
+                  - generic [ref=e1406]:
+                    - button [ref=e1411] [cursor=pointer]:
+                      - text: ₹1,70,180
+                      - generic [ref=e1412]: Show price breakdown
+                    - generic [ref=e1414]: for 5 nights
+                    - generic [ref=e1415]: ₹1,70,180 for 5 nights
+                  - generic [ref=e1417]: Free cancellation
+                - generic [ref=e1418]:
+                  - generic:
+                    - generic: 4.62 out of 5 average rating, 1344 reviews
+                    - generic:
+                      - img
+                    - generic: 4.62 (1344)
+          - group [ref=e1441]:
+            - link [ref=e1442] [cursor=pointer]:
+              - /url: /rooms/1625715388909895483?search_mode=regular_search&adults=1&check_in=2026-07-18&check_out=2026-07-23&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3stJyICz5mSF6GX&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1443]:
+              - group [ref=e1446]:
+                - generic:
+                  - button [ref=e1448] [cursor=pointer]:
+                    - img [ref=e1449]
+                  - generic:
+                    - button [disabled] [ref=e1452] [cursor=pointer]:
+                      - img [ref=e1454]
+                    - button [ref=e1457] [cursor=pointer]:
+                      - img [ref=e1459]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1465]:
+                  - link [ref=e1466] [cursor=pointer]:
+                    - /url: /rooms/1625715388909895483?search_mode=regular_search&adults=1&check_in=2026-07-18&check_out=2026-07-23&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3stJyICz5mSF6GX&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1469]
+                  - link [ref=e1470] [cursor=pointer]:
+                    - /url: /rooms/1625715388909895483?search_mode=regular_search&adults=1&check_in=2026-07-18&check_out=2026-07-23&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3stJyICz5mSF6GX&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1471] [cursor=pointer]:
+                    - /url: /rooms/1625715388909895483?search_mode=regular_search&adults=1&check_in=2026-07-18&check_out=2026-07-23&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3stJyICz5mSF6GX&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1472] [cursor=pointer]:
+                    - /url: /rooms/1625715388909895483?search_mode=regular_search&adults=1&check_in=2026-07-18&check_out=2026-07-23&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3stJyICz5mSF6GX&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1473] [cursor=pointer]:
+                    - /url: /rooms/1625715388909895483?search_mode=regular_search&adults=1&check_in=2026-07-18&check_out=2026-07-23&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3stJyICz5mSF6GX&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1474] [cursor=pointer]:
+                    - /url: /rooms/1625715388909895483?search_mode=regular_search&adults=1&check_in=2026-07-18&check_out=2026-07-23&children=0&infants=0&pets=0&source_impression_id=p3_1780336881_P3stJyICz5mSF6GX&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1475]:
+                - generic [ref=e1476]: Place to stay in New York City
+                - generic [ref=e1478]: Cozy Private Room near Howard Beach –JFK & Subway
+                - generic [ref=e1479]:
+                  - generic [ref=e1480]:
+                    - generic [ref=e1481]: 1 bedroom
+                    - generic [ref=e1482]: 1 bedroom
+                  - generic [ref=e1483]:
+                    - generic [ref=e1484]: 1 queen bed
+                    - generic [ref=e1485]: ","
+                    - generic [ref=e1486]: ·
+                    - generic [ref=e1487]: 1 queen bed
+                  - generic [ref=e1488]:
+                    - generic [ref=e1489]: 1 bathroom
+                    - generic [ref=e1490]: ","
+                    - generic [ref=e1491]: ·
+                    - generic [ref=e1492]: 1 bathroom
+                - generic [ref=e1494]:
+                  - generic [ref=e1495]: 18–23 Jul
+                  - generic [ref=e1496]: 18–23 Jul
+                - generic [ref=e1497]:
+                  - generic [ref=e1500]:
+                    - button [ref=e1505] [cursor=pointer]:
+                      - text: ₹46,741
+                      - generic [ref=e1506]: Show price breakdown
+                    - generic [ref=e1508]: for 5 nights
+                    - generic [ref=e1509]: ₹46,741 for 5 nights
+                  - generic [ref=e1511]: Free cancellation
+                - generic [ref=e1512]:
+                  - generic:
+                    - generic: 5.0 out of 5 average rating, 4 reviews
+                    - generic:
+                      - img
+                    - generic: 5.0 (4)
+          - group [ref=e1535]:
+            - link [ref=e1536] [cursor=pointer]:
+              - /url: /rooms/1453066826493838112?search_mode=regular_search&adults=1&check_in=2026-06-04&check_out=2026-06-09&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3VYbTX67OKo2sUn&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1537]:
+              - group [ref=e1540]:
+                - generic:
+                  - button [ref=e1542] [cursor=pointer]:
+                    - img [ref=e1543]
+                  - generic:
+                    - button [disabled] [ref=e1546] [cursor=pointer]:
+                      - img [ref=e1548]
+                    - button [ref=e1551] [cursor=pointer]:
+                      - img [ref=e1553]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1559]:
+                  - link [ref=e1560] [cursor=pointer]:
+                    - /url: /rooms/1453066826493838112?search_mode=regular_search&adults=1&check_in=2026-06-04&check_out=2026-06-09&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3VYbTX67OKo2sUn&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1563]
+                  - link [ref=e1564] [cursor=pointer]:
+                    - /url: /rooms/1453066826493838112?search_mode=regular_search&adults=1&check_in=2026-06-04&check_out=2026-06-09&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3VYbTX67OKo2sUn&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1565] [cursor=pointer]:
+                    - /url: /rooms/1453066826493838112?search_mode=regular_search&adults=1&check_in=2026-06-04&check_out=2026-06-09&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3VYbTX67OKo2sUn&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1566] [cursor=pointer]:
+                    - /url: /rooms/1453066826493838112?search_mode=regular_search&adults=1&check_in=2026-06-04&check_out=2026-06-09&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3VYbTX67OKo2sUn&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1567] [cursor=pointer]:
+                    - /url: /rooms/1453066826493838112?search_mode=regular_search&adults=1&check_in=2026-06-04&check_out=2026-06-09&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3VYbTX67OKo2sUn&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1568] [cursor=pointer]:
+                    - /url: /rooms/1453066826493838112?search_mode=regular_search&adults=1&check_in=2026-06-04&check_out=2026-06-09&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3VYbTX67OKo2sUn&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1569]:
+                - generic [ref=e1570]: Hotel in New York City
+                - generic [ref=e1572]: Close to Times Square + Free Breakfast & Gym
+                - generic [ref=e1573]:
+                  - generic [ref=e1574]:
+                    - generic [ref=e1575]: 1 bedroom
+                    - generic [ref=e1576]: 1 bedroom
+                  - generic [ref=e1577]:
+                    - generic [ref=e1578]: 1 king bed
+                    - generic [ref=e1579]: ","
+                    - generic [ref=e1580]: ·
+                    - generic [ref=e1581]: 1 king bed
+                  - generic [ref=e1582]:
+                    - generic [ref=e1583]: 1 bathroom
+                    - generic [ref=e1584]: ","
+                    - generic [ref=e1585]: ·
+                    - generic [ref=e1586]: 1 bathroom
+                - generic [ref=e1588]:
+                  - generic [ref=e1589]: 4–9 Jun
+                  - generic [ref=e1590]: 4–9 Jun
+                - generic [ref=e1591]:
+                  - generic [ref=e1596]:
+                    - generic [ref=e1597]:
+                      - generic [ref=e1598]: ₹1,48,038
+                      - button [ref=e1601] [cursor=pointer]:
+                        - text: ₹1,22,849
+                        - generic [ref=e1602]: Show price breakdown
+                    - generic [ref=e1605]: for 5 nights
+                  - generic [ref=e1606]:
+                    - generic [ref=e1607]: Extended stay discount
+                    - generic [ref=e1608]: Free cancellation
+                - generic [ref=e1609]:
+                  - generic:
+                    - generic: 4.67 out of 5 average rating, 313 reviews
+                    - generic:
+                      - img
+                    - generic: 4.67 (313)
+          - group [ref=e1632]:
+            - link [ref=e1633] [cursor=pointer]:
+              - /url: /rooms/992970965790772607?search_mode=regular_search&adults=1&check_in=2027-01-01&check_out=2027-01-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3sBzdQ55G9YOorE&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1634]:
+              - group [ref=e1637]:
+                - generic:
+                  - button [ref=e1639] [cursor=pointer]:
+                    - img [ref=e1640]
+                  - generic:
+                    - button [disabled] [ref=e1643] [cursor=pointer]:
+                      - img [ref=e1645]
+                    - button [ref=e1648] [cursor=pointer]:
+                      - img [ref=e1650]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1656]:
+                  - link [ref=e1657] [cursor=pointer]:
+                    - /url: /rooms/992970965790772607?search_mode=regular_search&adults=1&check_in=2027-01-01&check_out=2027-01-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3sBzdQ55G9YOorE&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1660]
+                  - link [ref=e1661] [cursor=pointer]:
+                    - /url: /rooms/992970965790772607?search_mode=regular_search&adults=1&check_in=2027-01-01&check_out=2027-01-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3sBzdQ55G9YOorE&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1662] [cursor=pointer]:
+                    - /url: /rooms/992970965790772607?search_mode=regular_search&adults=1&check_in=2027-01-01&check_out=2027-01-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3sBzdQ55G9YOorE&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1663] [cursor=pointer]:
+                    - /url: /rooms/992970965790772607?search_mode=regular_search&adults=1&check_in=2027-01-01&check_out=2027-01-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3sBzdQ55G9YOorE&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1664] [cursor=pointer]:
+                    - /url: /rooms/992970965790772607?search_mode=regular_search&adults=1&check_in=2027-01-01&check_out=2027-01-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3sBzdQ55G9YOorE&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1665] [cursor=pointer]:
+                    - /url: /rooms/992970965790772607?search_mode=regular_search&adults=1&check_in=2027-01-01&check_out=2027-01-06&children=0&infants=0&pets=0&source_impression_id=p3_1780336882_P3sBzdQ55G9YOorE&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1666]:
+                - generic [ref=e1667]: Hotel in New York City
+                - generic [ref=e1669]: Steps to Times Square | Full Kitchen. Pet-Friendly
+                - generic [ref=e1670]:
+                  - generic [ref=e1671]:
+                    - generic [ref=e1672]: 1 bedroom
+                    - generic [ref=e1673]: 1 bedroom
+                  - generic [ref=e1674]:
+                    - generic [ref=e1675]: 1 queen bed
+                    - generic [ref=e1676]: ","
+                    - generic [ref=e1677]: ·
+                    - generic [ref=e1678]: 1 queen bed
+                  - generic [ref=e1679]:
+                    - generic [ref=e1680]: 1 bathroom
+                    - generic [ref=e1681]: ","
+                    - generic [ref=e1682]: ·
+                    - generic [ref=e1683]: 1 bathroom
+                - generic [ref=e1685]:
+                  - generic [ref=e1686]: 1–6 Jan
+                  - generic [ref=e1687]: 1–6 Jan
+                - generic [ref=e1688]:
+                  - generic [ref=e1691]:
+                    - button [ref=e1696] [cursor=pointer]:
+                      - text: ₹1,12,284
+                      - generic [ref=e1697]: Show price breakdown
+                    - generic [ref=e1699]: for 5 nights
+                    - generic [ref=e1700]: ₹1,12,284 for 5 nights
+                  - generic [ref=e1702]: Free cancellation
+                - generic [ref=e1703]:
+                  - generic:
+                    - generic: 4.7 out of 5 average rating, 1640 reviews
+                    - generic:
+                      - img
+                    - generic: 4.7 (1640)
+          - group [ref=e1726]:
+            - link [ref=e1727] [cursor=pointer]:
+              - /url: /rooms/1599592594311830433?search_mode=regular_search&adults=1&check_in=2026-06-09&check_out=2026-06-14&children=0&infants=0&pets=0&photo_id=2629318328&source_impression_id=p3_1780336882_P3HcVVB2JiGmceob&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1728]:
+              - group [ref=e1731]:
+                - generic:
+                  - button [ref=e1733] [cursor=pointer]:
+                    - img [ref=e1734]
+                  - generic:
+                    - button [disabled] [ref=e1737] [cursor=pointer]:
+                      - img [ref=e1739]
+                    - button [ref=e1742] [cursor=pointer]:
+                      - img [ref=e1744]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1750]:
+                  - link [ref=e1751] [cursor=pointer]:
+                    - /url: /rooms/1599592594311830433?search_mode=regular_search&adults=1&check_in=2026-06-09&check_out=2026-06-14&children=0&infants=0&pets=0&photo_id=2629318328&source_impression_id=p3_1780336882_P3HcVVB2JiGmceob&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1754]
+                  - link [ref=e1755] [cursor=pointer]:
+                    - /url: /rooms/1599592594311830433?search_mode=regular_search&adults=1&check_in=2026-06-09&check_out=2026-06-14&children=0&infants=0&pets=0&photo_id=2629318328&source_impression_id=p3_1780336882_P3HcVVB2JiGmceob&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1756] [cursor=pointer]:
+                    - /url: /rooms/1599592594311830433?search_mode=regular_search&adults=1&check_in=2026-06-09&check_out=2026-06-14&children=0&infants=0&pets=0&photo_id=2629318328&source_impression_id=p3_1780336882_P3HcVVB2JiGmceob&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1757] [cursor=pointer]:
+                    - /url: /rooms/1599592594311830433?search_mode=regular_search&adults=1&check_in=2026-06-09&check_out=2026-06-14&children=0&infants=0&pets=0&photo_id=2629318328&source_impression_id=p3_1780336882_P3HcVVB2JiGmceob&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1758] [cursor=pointer]:
+                    - /url: /rooms/1599592594311830433?search_mode=regular_search&adults=1&check_in=2026-06-09&check_out=2026-06-14&children=0&infants=0&pets=0&photo_id=2629318328&source_impression_id=p3_1780336882_P3HcVVB2JiGmceob&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1759] [cursor=pointer]:
+                    - /url: /rooms/1599592594311830433?search_mode=regular_search&adults=1&check_in=2026-06-09&check_out=2026-06-14&children=0&infants=0&pets=0&photo_id=2629318328&source_impression_id=p3_1780336882_P3HcVVB2JiGmceob&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1760]:
+                - generic [ref=e1761]: Home in Jersey City
+                - generic [ref=e1763]: Chic 2BR 2 Bathroom — NYC at Your Door
+                - generic [ref=e1764]:
+                  - generic [ref=e1765]:
+                    - generic [ref=e1766]: 2 bedrooms
+                    - generic [ref=e1767]: 2 bedrooms
+                  - generic [ref=e1768]:
+                    - generic [ref=e1769]: 2 queen beds
+                    - generic [ref=e1770]: ","
+                    - generic [ref=e1771]: ·
+                    - generic [ref=e1772]: 2 queen beds
+                  - generic [ref=e1773]:
+                    - generic [ref=e1774]: 2 bathrooms
+                    - generic [ref=e1775]: ","
+                    - generic [ref=e1776]: ·
+                    - generic [ref=e1777]: 2 bathrooms
+                - generic [ref=e1779]:
+                  - generic [ref=e1780]: 9–14 Jun
+                  - generic [ref=e1781]: 9–14 Jun
+                - generic [ref=e1782]:
+                  - generic [ref=e1785]:
+                    - button [ref=e1790] [cursor=pointer]:
+                      - text: ₹1,43,271
+                      - generic [ref=e1791]: Show price breakdown
+                    - generic [ref=e1793]: for 5 nights
+                    - generic [ref=e1794]: ₹1,43,271 for 5 nights
+                  - generic [ref=e1796]: Free cancellation
+                - generic [ref=e1797]:
+                  - generic:
+                    - generic: New place to stay
+                    - generic:
+                      - img
+                    - generic: New
+          - group [ref=e1820]:
+            - link [ref=e1821] [cursor=pointer]:
+              - /url: /rooms/1647102582717037098?search_mode=regular_search&adults=1&check_in=2026-06-12&check_out=2026-06-17&children=0&infants=0&pets=0&photo_id=2614040409&source_impression_id=p3_1780336882_P3akhcVo9sobwhaa&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+            - generic [ref=e1822]:
+              - group [ref=e1825]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: Guest favourite
+                        - generic: Guest favourite
+                    - button [ref=e1827] [cursor=pointer]:
+                      - img [ref=e1828]
+                  - generic:
+                    - button [disabled] [ref=e1831] [cursor=pointer]:
+                      - img [ref=e1833]
+                    - button [ref=e1836] [cursor=pointer]:
+                      - img [ref=e1838]
+                  - generic:
+                    - generic:
+                      - img
+                - generic [ref=e1844]:
+                  - link [ref=e1845] [cursor=pointer]:
+                    - /url: /rooms/1647102582717037098?search_mode=regular_search&adults=1&check_in=2026-06-12&check_out=2026-06-17&children=0&infants=0&pets=0&photo_id=2614040409&source_impression_id=p3_1780336882_P3akhcVo9sobwhaa&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                    - img [ref=e1848]
+                  - link [ref=e1849] [cursor=pointer]:
+                    - /url: /rooms/1647102582717037098?search_mode=regular_search&adults=1&check_in=2026-06-12&check_out=2026-06-17&children=0&infants=0&pets=0&photo_id=2614040409&source_impression_id=p3_1780336882_P3akhcVo9sobwhaa&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1850] [cursor=pointer]:
+                    - /url: /rooms/1647102582717037098?search_mode=regular_search&adults=1&check_in=2026-06-12&check_out=2026-06-17&children=0&infants=0&pets=0&photo_id=2614040409&source_impression_id=p3_1780336882_P3akhcVo9sobwhaa&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1851] [cursor=pointer]:
+                    - /url: /rooms/1647102582717037098?search_mode=regular_search&adults=1&check_in=2026-06-12&check_out=2026-06-17&children=0&infants=0&pets=0&photo_id=2614040409&source_impression_id=p3_1780336882_P3akhcVo9sobwhaa&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1852] [cursor=pointer]:
+                    - /url: /rooms/1647102582717037098?search_mode=regular_search&adults=1&check_in=2026-06-12&check_out=2026-06-17&children=0&infants=0&pets=0&photo_id=2614040409&source_impression_id=p3_1780336882_P3akhcVo9sobwhaa&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+                  - link [ref=e1853] [cursor=pointer]:
+                    - /url: /rooms/1647102582717037098?search_mode=regular_search&adults=1&check_in=2026-06-12&check_out=2026-06-17&children=0&infants=0&pets=0&photo_id=2614040409&source_impression_id=p3_1780336882_P3akhcVo9sobwhaa&previous_page_section_name=1000&federated_search_id=8ba9bc53-93fd-45b3-9242-e1f108b60d2d
+              - generic [ref=e1854]:
+                - generic [ref=e1855]: Flat in Brooklyn
+                - generic [ref=e1857]: Unique NYC Stay | 3BR • 3 Bathrooms + Patio
+                - generic [ref=e1858]:
+                  - generic [ref=e1859]:
+                    - generic [ref=e1860]: 3 bedrooms
+                    - generic [ref=e1861]: 3 bedrooms
+                  - generic [ref=e1862]:
+                    - generic [ref=e1863]: 4 beds
+                    - generic [ref=e1864]: ","
+                    - generic [ref=e1865]: ·
+                    - generic [ref=e1866]: 4 beds
+                  - generic [ref=e1867]:
+                    - generic [ref=e1868]: 3 bathrooms
+                    - generic [ref=e1869]: ","
+                    - generic [ref=e1870]: ·
+                    - generic [ref=e1871]: 3 bathrooms
+                - generic [ref=e1873]:
+                  - generic [ref=e1874]: 12–17 Jun
+                  - generic [ref=e1875]: 12–17 Jun
+                - generic [ref=e1876]:
+                  - generic [ref=e1879]:
+                    - button [ref=e1884] [cursor=pointer]:
+                      - text: ₹3,25,419
+                      - generic [ref=e1885]: Show price breakdown
+                    - generic [ref=e1887]: for 5 nights
+                    - generic [ref=e1888]: ₹3,25,419 for 5 nights
+                  - generic [ref=e1890]: Free cancellation
+                - generic [ref=e1891]:
+                  - generic:
+                    - generic: 5.0 out of 5 average rating, 5 reviews
+                    - generic:
+                      - img
+                    - generic: 5.0 (5)
+      - region [ref=e1897]:
+        - generic [ref=e1898]: Centred on New Jersey
+        - heading [level=2] [ref=e1900]: Google map Showing 20 stays.
+        - button [ref=e1901] [cursor=pointer]:
+          - img [ref=e1902]
+        - generic [ref=e1904]:
+          - button [ref=e1907] [cursor=pointer]:
+            - img [ref=e1909]
+          - generic [ref=e1916]:
+            - button [ref=e1917] [cursor=pointer]:
+              - img [ref=e1918]
+            - button [ref=e1922] [cursor=pointer]:
+              - img [ref=e1923]
+        - iframe [ref=e1935]
+    - contentinfo [ref=e1941]:
+      - generic [ref=e1942]:
+        - heading [level=2] [ref=e1944]: Site Footer
+        - generic [ref=e1945]:
+          - generic [ref=e1946]:
+            - heading [level=3] [ref=e1947]: Support
+            - list [ref=e1948]:
+              - listitem [ref=e1949]:
+                - link [ref=e1950] [cursor=pointer]:
+                  - /url: /help/home?from=footer
+                  - text: Help Centre
+              - listitem [ref=e1951]:
+                - link [ref=e1952] [cursor=pointer]:
+                  - /url: /help/contact-us?entry=DESKTOP_FOOTER_SAFETY
+                  - text: Get help with a safety issue
+              - listitem [ref=e1953]:
+                - link [ref=e1954] [cursor=pointer]:
+                  - /url: /aircover
+                  - text: AirCover
+              - listitem [ref=e1955]:
+                - link [ref=e1956] [cursor=pointer]:
+                  - /url: /against-discrimination
+                  - text: Anti-discrimination
+              - listitem [ref=e1957]:
+                - link [ref=e1958] [cursor=pointer]:
+                  - /url: /accessibility
+                  - text: Disability support
+              - listitem [ref=e1959]:
+                - link [ref=e1960] [cursor=pointer]:
+                  - /url: /help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19
+                  - text: Cancellation options
+              - listitem [ref=e1961]:
+                - link [ref=e1962] [cursor=pointer]:
+                  - /url: /neighbors
+                  - text: Report neighbourhood concern
+          - generic [ref=e1963]:
+            - heading [level=3] [ref=e1964]: Hosting
+            - list [ref=e1965]:
+              - listitem [ref=e1966]:
+                - link [ref=e1967] [cursor=pointer]:
+                  - /url: /host/homes?from_footer=1
+                  - text: Airbnb your home
+              - listitem [ref=e1968]:
+                - link [ref=e1969] [cursor=pointer]:
+                  - /url: /host/experiences
+                  - text: Airbnb your experience
+              - listitem [ref=e1970]:
+                - link [ref=e1971] [cursor=pointer]:
+                  - /url: /host/services
+                  - text: Airbnb your service
+              - listitem [ref=e1972]:
+                - link [ref=e1973] [cursor=pointer]:
+                  - /url: /aircover-for-hosts
+                  - text: AirCover for Hosts
+              - listitem [ref=e1974]:
+                - link [ref=e1975] [cursor=pointer]:
+                  - /url: /resources
+                  - text: Hosting resources
+              - listitem [ref=e1976]:
+                - link [ref=e1977] [cursor=pointer]:
+                  - /url: https://community.withairbnb.com/t5/Community-Center/ct-p/community-center
+                  - text: Community forum
+              - listitem [ref=e1978]:
+                - link [ref=e1979] [cursor=pointer]:
+                  - /url: /help/responsible-hosting
+                  - text: Hosting responsibly
+              - listitem [ref=e1980]:
+                - link [ref=e1981] [cursor=pointer]:
+                  - /url: /e/intro-to-hosting
+                  - text: Join a free hosting class
+              - listitem [ref=e1982]:
+                - link [ref=e1983] [cursor=pointer]:
+                  - /url: /host/co-hosts
+                  - text: Find a co‑host
+              - listitem [ref=e1984]:
+                - link [ref=e1985] [cursor=pointer]:
+                  - /url: /refer
+                  - text: Refer a host
+          - generic [ref=e1986]:
+            - heading [level=3] [ref=e1987]: Airbnb
+            - list [ref=e1988]:
+              - listitem [ref=e1989]:
+                - link [ref=e1990] [cursor=pointer]:
+                  - /url: /release
+                  - text: 2026 Summer Release
+              - listitem [ref=e1991]:
+                - link [ref=e1992] [cursor=pointer]:
+                  - /url: /press/news
+                  - text: Newsroom
+              - listitem [ref=e1993]:
+                - link [ref=e1994] [cursor=pointer]:
+                  - /url: /careers
+                  - text: Careers
+              - listitem [ref=e1995]:
+                - link [ref=e1996] [cursor=pointer]:
+                  - /url: https://investors.airbnb.com
+                  - text: Investors
+              - listitem [ref=e1997]:
+                - link [ref=e1998] [cursor=pointer]:
+                  - /url: https://www.airbnb.org?locale=en-IN
+                  - text: Airbnb.org emergency stays
+        - generic [ref=e1999]:
+          - generic [ref=e2000]: Footer section
+          - generic [ref=e2002]:
+            - generic [ref=e2004]:
+              - generic [ref=e2005]: © 2026 Airbnb, Inc.
+              - generic [ref=e2006]:
+                - generic [ref=e2008]: ·
+                - list [ref=e2010]:
+                  - listitem [ref=e2011]:
+                    - link [ref=e2012] [cursor=pointer]:
+                      - /url: /terms/privacy_policy
+                      - text: Privacy
+                    - generic [ref=e2013]:
+                      - generic:
+                        - generic: ·
+                  - listitem [ref=e2014]:
+                    - link [ref=e2015] [cursor=pointer]:
+                      - /url: /terms
+                      - text: Terms
+                    - generic [ref=e2016]:
+                      - generic:
+                        - generic: ·
+                  - listitem [ref=e2017]:
+                    - link [ref=e2018] [cursor=pointer]:
+                      - /url: /about/company-details
+                      - text: Company details
+            - generic [ref=e2019]:
+              - generic [ref=e2021]:
+                - button [ref=e2023] [cursor=pointer]:
+                  - generic [ref=e2024]:
+                    - generic:
+                      - img
+                      - text: English (IN)
+                - button [ref=e2026] [cursor=pointer]:
+                  - generic [ref=e2028]:
+                    - generic [ref=e2029]: ₹
+                    - generic [ref=e2030]: INR
+              - list [ref=e2032]:
+                - listitem [ref=e2033]:
+                  - link [ref=e2034] [cursor=pointer]:
+                    - /url: https://www.facebook.com/AirbnbIndia
+                    - img [ref=e2036]
+                - listitem [ref=e2038]:
+                  - link [ref=e2039] [cursor=pointer]:
+                    - /url: https://twitter.com/airbnb_in
+                    - img [ref=e2041]
+                - listitem [ref=e2043]:
+                  - link [ref=e2044] [cursor=pointer]:
+                    - /url: https://instagram.com/airbnb
+                    - img [ref=e2046]
+  - dialog "Now you’ll see one price for your trip, all fees included." [active] [ref=e2055]:
+    - button "Close" [ref=e2057] [cursor=pointer]:
+      - img [ref=e2059]
+    - generic [ref=e2065]:
+      - generic [ref=e2066]:
+        - generic [ref=e2067]:
+          - generic [ref=e2068]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2069]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2070]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2071]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2072]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2073]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2074]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2075]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2076]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2077]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2078]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2079]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2080]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2081]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2082]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2083]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2084]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2085]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2086]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2087]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2088]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2089]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2090]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2091]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2092]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2093]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2094]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2095]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2096]: Now you’ll see one price foryour trip, all fees included.
+          - generic [ref=e2097]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2098]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2099]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2100]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2101]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2102]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2103]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2104]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2105]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2106]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2107]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2108]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2109]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2110]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2111]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2112]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2113]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2114]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2115]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2116]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2117]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2118]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2119]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2120]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2121]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2122]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2123]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2124]: Now you’ll see one price for your trip, all fees included.
+          - generic [ref=e2125]: Now you’ll see one price for your trip, all fees included.
+        - generic [ref=e2126]: Now you’ll see one price for your trip, all fees included.
+      - button "Got it" [ref=e2127] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  92  | 
+  93  |   /**
+  94  |    * API-004: No 5xx server errors on homepage load
+  95  |    */
+  96  |   test('API-004: homepage should not produce 5xx server errors', async ({ page }) => {
+  97  |     const serverErrors: string[] = [];
+  98  | 
+  99  |     page.on('response', (response) => {
+  100 |       if (response.status() >= 500) {
+  101 |         serverErrors.push(`${response.status()} ${response.url()}`);
+  102 |       }
+  103 |     });
+  104 | 
+  105 |     await page.goto('https://www.airbnb.com');
+  106 |     await page.waitForLoadState('networkidle');
+  107 | 
+  108 |     expect(serverErrors).toHaveLength(0);
+  109 |   });
+  110 | 
+  111 |   /**
+  112 |    * API-005: Homepage response time is acceptable
+  113 |    */
+  114 |   test('API-005: homepage should load within 10 seconds', async ({ page }) => {
+  115 |     const startTime = Date.now();
+  116 |     await page.goto('https://www.airbnb.com');
+  117 |     await page.waitForLoadState('domcontentloaded');
+  118 |     const loadTime = Date.now() - startTime;
+  119 | 
+  120 |     expect(loadTime).toBeLessThan(10_000);
+  121 |   });
+  122 | 
+  123 |   /**
+  124 |    * API-006: Search page response contains required HTTP headers
+  125 |    */
+  126 |   test('API-006: search page response should have proper headers', async ({ page }) => {
+  127 |     const response = await page.goto('https://www.airbnb.com/s/New-York/homes');
+  128 | 
+  129 |     expect(response).toBeDefined();
+  130 |     expect(response!.status()).toBe(200);
+  131 | 
+  132 |     const contentType = response!.headers()['content-type'];
+  133 |     expect(contentType).toContain('text/html');
+  134 |   });
+  135 | 
+  136 |   /**
+  137 |    * API-007: Mock API response to test UI behavior
+  138 |    * This demonstrates API mocking — a powerful technique for isolated testing.
+  139 |    */
+  140 |   test('API-007: should handle empty search results gracefully (mocked)', async ({ page }) => {
+  141 |     // Intercept search API and return empty results
+  142 |     await page.route('**/api/v3/ExploreSearch**', async (route) => {
+  143 |       await route.fulfill({
+  144 |         status: 200,
+  145 |         contentType: 'application/json',
+  146 |         body: JSON.stringify({
+  147 |           data: {
+  148 |             presentation: {
+  149 |               staysSearch: {
+  150 |                 results: {
+  151 |                   searchResults: [],
+  152 |                   paginationInfo: { hasNextPage: false },
+  153 |                 },
+  154 |               },
+  155 |             },
+  156 |           },
+  157 |         }),
+  158 |       });
+  159 |     });
+  160 | 
+  161 |     await page.goto('https://www.airbnb.com/s/SomeVeryObscurePlace/homes');
+  162 |     await page.waitForLoadState('domcontentloaded');
+  163 | 
+  164 |     // Page should not crash with empty results
+  165 |     expect(page.url()).toContain('airbnb.com');
+  166 |   });
+  167 | 
+  168 |   /**
+  169 |    * API-008: Validate response times for search API calls
+  170 |    */
+  171 |   test('API-008: API calls on search page should respond within 5 seconds', async ({ page }) => {
+  172 |     const slowRequests: string[] = [];
+  173 | 
+  174 |     page.on('response', async (response) => {
+  175 |       // Check timing from the request object
+  176 |       const request = response.request();
+  177 |       const timing = request.timing();
+  178 |       if (timing.responseEnd - timing.requestStart > 5000) {
+  179 |         slowRequests.push(response.url());
+  180 |       }
+  181 |     });
+  182 | 
+  183 |     await page.goto('https://www.airbnb.com/s/New-York/homes');
+  184 |     await page.waitForLoadState('networkidle');
+  185 | 
+  186 |     // Log slow requests but don't fail (network conditions vary in CI)
+  187 |     if (slowRequests.length > 0) {
+  188 |       console.warn('Slow API calls detected:', slowRequests);
+  189 |     }
+  190 | 
+  191 |     // Page should have loaded regardless
+> 192 |     expect(page.url()).toContain('airbnb.com');
+      |                        ^ Error: expect(received).toContain(expected) // indexOf
+  193 |   });
+  194 | });
+  195 | 
+  196 | test.describe('API Tests — Direct HTTP Requests', () => {
+  197 |   /**
+  198 |    * API-009: Public sitemap is accessible
+  199 |    */
+  200 |   test('API-009: sitemap.xml should be accessible', async ({ request }) => {
+  201 |     const response = await request.get('https://www.airbnb.com/sitemap.xml');
+  202 |     expect(response.status()).toBe(200);
+  203 |   });
+  204 | 
+  205 |   /**
+  206 |    * API-010: robots.txt is accessible
+  207 |    */
+  208 |   test('API-010: robots.txt should be present', async ({ request }) => {
+  209 |     const response = await request.get('https://www.airbnb.com/robots.txt');
+  210 |     expect(response.status()).toBe(200);
+  211 |     const body = await response.text();
+  212 |     expect(body).toContain('User-agent');
+  213 |   });
+  214 | 
+  215 |   /**
+  216 |    * API-011: Canonical homepage returns 200
+  217 |    */
+  218 |   test('API-011: homepage should return HTTP 200', async ({ request }) => {
+  219 |     const response = await request.get('https://www.airbnb.com/');
+  220 |     expect(response.status()).toBe(200);
+  221 |   });
+  222 | 
+  223 |   /**
+  224 |    * API-012: Non-existent page returns 404 not 500
+  225 |    */
+  226 |   test('API-012: non-existent routes should return 404', async ({ request }) => {
+  227 |     const response = await request.get('https://www.airbnb.com/this-page-does-not-exist-xyz');
+  228 |     // Should be 404 or redirect, not 500
+  229 |     expect(response.status()).toBeLessThan(500);
+  230 |   });
+  231 | });
+  232 | 
+```

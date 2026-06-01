@@ -1,0 +1,1611 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e\homepage.spec.ts >> Homepage >> HOME-003: destination input should accept text
+- Location: tests\e2e\homepage.spec.ts:32:7
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 60000ms exceeded.
+Call log:
+  - waiting for getByPlaceholder('Search destinations').or(locator('[data-testid="structured-search-input-field-query"]'))
+    - locator resolved to <input value="" name="query" type="search" autocorrect="off" aria-label="Where" autocomplete="off" spellcheck="false" aria-autocomplete="none" placeholder="Search destinations" id="bigsearch-query-location-input" data-testid="structured-search-input-field-query" aria-describedby="bigsearch-query-location-description" class="fornie7 atm_9s_1ulexfb atm_3f_idpfg4 atm_gi_idpfg4 atm_l8_idpfg4 atm_vy_1osqo2v atm_26_glywfm atm_c8_1h3mmnw atm_g3_1vnrj90 atm_fr_b3emyl atm_cs_1mexzig atm_7l_1dmvgf5 atm_sq_1l2s…/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div data-testid="modal-container" class="co2m3zy atm_wq_z68epy atm_mk_1n9t6rb atm_tk_idpfg4 atm_n3_idpfg4 atm_6i_idpfg4 atm_fq_idpfg4 atm_iy_18ock4e atm_lo_1mwk2pp atm_9s_1txwivl atm_ar_vrvcex atm_h_esu3gu atm_fc_1h6ojuz atm_iy_uat40h__js3chn atm_le_1t3geja__1138a75 atm_l8_1ylpe5n__1d8hi0p atm_h_1h6ojuz__1d8hi0p atm_h_1h6ojuz__qky54b atm_lo_idpfg4_vagkz0_2ygr2h atm_le_idpfg4_vagkz0_2ygr2h atm_lk_idpfg4_vagkz0_2ygr2h atm_ll_idpfg4_vagkz0_2ygr2h dir dir-ltr">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div data-testid="modal-container" class="co2m3zy atm_wq_z68epy atm_mk_1n9t6rb atm_tk_idpfg4 atm_n3_idpfg4 atm_6i_idpfg4 atm_fq_idpfg4 atm_iy_18ock4e atm_lo_1mwk2pp atm_9s_1txwivl atm_ar_vrvcex atm_h_esu3gu atm_fc_1h6ojuz atm_iy_uat40h__js3chn atm_le_1t3geja__1138a75 atm_l8_1ylpe5n__1d8hi0p atm_h_1h6ojuz__1d8hi0p atm_h_1h6ojuz__qky54b atm_lo_idpfg4_vagkz0_2ygr2h atm_le_idpfg4_vagkz0_2ygr2h atm_lk_idpfg4_vagkz0_2ygr2h atm_ll_idpfg4_vagkz0_2ygr2h dir dir-ltr">…</div> from <div>…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    12 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div data-testid="modal-container" class="co2m3zy atm_wq_z68epy atm_mk_1n9t6rb atm_tk_idpfg4 atm_n3_idpfg4 atm_6i_idpfg4 atm_fq_idpfg4 atm_iy_18ock4e atm_lo_1mwk2pp atm_9s_1txwivl atm_ar_vrvcex atm_h_esu3gu atm_fc_1h6ojuz atm_iy_uat40h__js3chn atm_le_1t3geja__1138a75 atm_l8_1ylpe5n__1d8hi0p atm_h_1h6ojuz__1d8hi0p atm_h_1h6ojuz__qky54b atm_lo_idpfg4_vagkz0_2ygr2h atm_le_idpfg4_vagkz0_2ygr2h atm_lk_idpfg4_vagkz0_2ygr2h atm_ll_idpfg4_vagkz0_2ygr2h dir dir-ltr">…</div> from <div>…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link [ref=e2] [cursor=pointer]:
+    - /url: "#site-content"
+    - text: Skip to content
+    - img [ref=e3]
+  - generic [ref=e15]:
+    - heading [level=1] [ref=e16]: Airbnb homepage
+    - banner [ref=e20]:
+      - link [ref=e21] [cursor=pointer]:
+        - /url: /
+        - img [ref=e23]
+      - search [ref=e25]:
+        - generic [ref=e27]:
+          - tablist [ref=e29]:
+            - tab [selected] [ref=e30] [cursor=pointer]:
+              - generic [ref=e33]: Homes
+              - generic [ref=e34]: Homes
+            - tab [ref=e35] [cursor=pointer]:
+              - generic [ref=e39]:
+                - text: NEW
+                - generic [ref=e40]: NEW
+              - generic [ref=e43]: Experiences
+              - generic [ref=e44]: Experiences, new
+            - tab [ref=e45] [cursor=pointer]:
+              - generic [ref=e49]:
+                - text: NEW
+                - generic [ref=e50]: NEW
+              - generic [ref=e53]: Services
+              - generic [ref=e54]: Services, new
+          - generic [ref=e58]:
+            - generic [ref=e62]:
+              - generic [ref=e64] [cursor=pointer]:
+                - generic [ref=e65]: Where
+                - searchbox [ref=e67]
+              - button [ref=e69] [cursor=pointer]:
+                - generic [ref=e70]:
+                  - generic [ref=e71]: When
+                  - generic [ref=e73]: Add dates
+              - button [ref=e75] [cursor=pointer]:
+                - generic [ref=e76]:
+                  - generic [ref=e77]: Who
+                  - generic [ref=e79]: Add guests
+            - button [ref=e80] [cursor=pointer]:
+              - img [ref=e83]
+      - navigation [ref=e87]:
+        - generic [ref=e88]:
+          - button [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]: Become a host
+          - button [ref=e92] [cursor=pointer]:
+            - img [ref=e94]
+        - button [ref=e98] [cursor=pointer]:
+          - img [ref=e100]
+    - generic [ref=e103]:
+      - main [ref=e104]:
+        - generic [ref=e105]:
+          - group [ref=e110]:
+            - link [ref=e113] [cursor=pointer]:
+              - /url: /s/Paris/homes?place_id=ChIJD7fiBh9u5kcRYJSMaMOCCwQ&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=FLEXIBLE_DATES&search_type=HOMEPAGE_CAROUSEL_CLICK
+              - generic [ref=e114]:
+                - heading [level=2] [ref=e115]:
+                  - generic [ref=e116]: Popular homes in Paris
+                - img [ref=e118]
+            - generic [ref=e121]: 6 of 9 items showing
+            - generic [ref=e124]:
+              - button [disabled] [ref=e125]:
+                - generic [ref=e126]:
+                  - generic [ref=e127]: _
+                  - img [ref=e128]
+              - button [ref=e130] [cursor=pointer]:
+                - generic [ref=e131]:
+                  - generic [ref=e132]: _
+                  - img [ref=e133]
+            - generic [ref=e139]:
+              - group [ref=e141]:
+                - link [ref=e142] [cursor=pointer]:
+                  - /url: /rooms/588780489931455266?check_in=2026-07-03&check_out=2026-07-05&photo_id=1366393274&source_impression_id=p3_1780337405_P3vRkqs96BEzhx2u&previous_page_section_name=1000
+                - generic [ref=e143]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e145] [cursor=pointer]:
+                          - img [ref=e147]
+                  - generic [ref=e149]:
+                    - generic [ref=e151]: Apartment in 15th Arrondissement
+                    - generic [ref=e152]:
+                      - generic [ref=e156]:
+                        - generic [ref=e159]: ₹68,274
+                        - generic [ref=e161]: for 2 nights
+                        - generic [ref=e162]: ₹68,274 for 2 nights
+                      - generic [ref=e163]:
+                        - generic [ref=e164]: ","
+                        - generic [ref=e165]: ·
+                      - generic [ref=e166]:
+                        - generic [ref=e167]: 5.0 out of 5 average rating
+                        - img [ref=e169]
+                        - generic [ref=e171]: "5.0"
+              - group [ref=e173]:
+                - link [ref=e174] [cursor=pointer]:
+                  - /url: /rooms/863468?check_in=2026-07-17&check_out=2026-07-19&photo_id=1662471077&source_impression_id=p3_1780337405_P3_5N6ImDb-LIKs0&previous_page_section_name=1000
+                - generic [ref=e175]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e177] [cursor=pointer]:
+                          - img [ref=e179]
+                  - generic [ref=e181]:
+                    - generic [ref=e183]: Room in 13th Arrondissement
+                    - generic [ref=e184]:
+                      - generic [ref=e188]:
+                        - generic [ref=e191]: ₹15,459
+                        - generic [ref=e193]: for 2 nights
+                        - generic [ref=e194]: ₹15,459 for 2 nights
+                      - generic [ref=e195]:
+                        - generic [ref=e196]: ","
+                        - generic [ref=e197]: ·
+                      - generic [ref=e198]:
+                        - generic [ref=e199]: 4.93 out of 5 average rating
+                        - img [ref=e201]
+                        - generic [ref=e203]: "4.93"
+              - group [ref=e205]:
+                - link [ref=e206] [cursor=pointer]:
+                  - /url: /rooms/1271915143781425950?check_in=2026-09-04&check_out=2026-09-06&photo_id=2620277807&source_impression_id=p3_1780337405_P30XGrOEnmRrOFxD&previous_page_section_name=1000
+                - generic [ref=e207]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e209] [cursor=pointer]:
+                          - img [ref=e211]
+                  - generic [ref=e213]:
+                    - generic [ref=e215]: Flat in 9th Arrondissement
+                    - generic [ref=e216]:
+                      - generic [ref=e220]:
+                        - generic [ref=e223]: ₹32,205
+                        - generic [ref=e225]: for 2 nights
+                        - generic [ref=e226]: ₹32,205 for 2 nights
+                      - generic [ref=e227]:
+                        - generic [ref=e228]: ","
+                        - generic [ref=e229]: ·
+                      - generic [ref=e230]:
+                        - generic [ref=e231]: 5.0 out of 5 average rating
+                        - img [ref=e233]
+                        - generic [ref=e235]: "5.0"
+              - group [ref=e237]:
+                - link [ref=e238] [cursor=pointer]:
+                  - /url: /rooms/669229903809413129?check_in=2026-08-21&check_out=2026-08-23&photo_id=1447879856&source_impression_id=p3_1780337405_P3IcOduaOK5q-MzG&previous_page_section_name=1000
+                - generic [ref=e239]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e241] [cursor=pointer]:
+                          - img [ref=e243]
+                  - generic [ref=e245]:
+                    - generic [ref=e247]: Flat in 9th Arrondissement
+                    - generic [ref=e248]:
+                      - generic [ref=e252]:
+                        - generic [ref=e255]: ₹31,819
+                        - generic [ref=e257]: for 2 nights
+                        - generic [ref=e258]: ₹31,819 for 2 nights
+                      - generic [ref=e259]:
+                        - generic [ref=e260]: ","
+                        - generic [ref=e261]: ·
+                      - generic [ref=e262]:
+                        - generic [ref=e263]: 4.89 out of 5 average rating
+                        - img [ref=e265]
+                        - generic [ref=e267]: "4.89"
+              - group [ref=e269]:
+                - link [ref=e270] [cursor=pointer]:
+                  - /url: /rooms/1536119775792438782?check_in=2026-07-31&check_out=2026-08-02&photo_id=2394567908&source_impression_id=p3_1780337405_P3QZtxayXycKwuBf&previous_page_section_name=1000
+                - generic [ref=e271]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e273] [cursor=pointer]:
+                          - img [ref=e275]
+                  - generic [ref=e277]:
+                    - generic [ref=e279]: Flat in 15th Arrondissement
+                    - generic [ref=e280]:
+                      - generic [ref=e284]:
+                        - generic [ref=e287]: ₹1,00,487
+                        - generic [ref=e289]: for 2 nights
+                        - generic [ref=e290]: ₹1,00,487 for 2 nights
+                      - generic [ref=e291]:
+                        - generic [ref=e292]: ","
+                        - generic [ref=e293]: ·
+                      - generic [ref=e294]:
+                        - generic [ref=e295]: 5.0 out of 5 average rating
+                        - img [ref=e297]
+                        - generic [ref=e299]: "5.0"
+              - group [ref=e301]:
+                - link [ref=e302] [cursor=pointer]:
+                  - /url: /rooms/1610735352677786969?check_in=2026-08-14&check_out=2026-08-16&photo_id=2499187056&source_impression_id=p3_1780337405_P3_CPFpIgQVM5mqm&previous_page_section_name=1000
+                - generic [ref=e303]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e305] [cursor=pointer]:
+                          - img [ref=e307]
+                  - generic [ref=e309]:
+                    - generic [ref=e311]: Flat in 15th Arrondissement
+                    - generic [ref=e312]:
+                      - generic [ref=e316]:
+                        - generic [ref=e319]: ₹23,188
+                        - generic [ref=e321]: for 2 nights
+                        - generic [ref=e322]: ₹23,188 for 2 nights
+                      - generic [ref=e323]:
+                        - generic [ref=e324]: ","
+                        - generic [ref=e325]: ·
+                      - generic [ref=e326]:
+                        - generic [ref=e327]: 4.96 out of 5 average rating
+                        - img [ref=e329]
+                        - generic [ref=e331]: "4.96"
+              - group [ref=e333]:
+                - link [ref=e334] [cursor=pointer]:
+                  - /url: /rooms/1663965224630354473?check_in=2026-11-27&check_out=2026-11-29&photo_id=2592456958&source_impression_id=p3_1780337405_P3cxi4hPFzwNBQ4I&previous_page_section_name=1000
+                - generic [ref=e335]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e337] [cursor=pointer]:
+                          - img [ref=e339]
+                  - generic [ref=e341]:
+                    - generic [ref=e343]: Flat in 7th Arrondissement
+                    - generic [ref=e344]:
+                      - generic [ref=e348]:
+                        - generic [ref=e351]: ₹61,654
+                        - generic [ref=e353]: for 2 nights
+                        - generic [ref=e354]: ₹61,654 for 2 nights
+                      - generic [ref=e355]:
+                        - generic [ref=e356]: ","
+                        - generic [ref=e357]: ·
+                      - generic [ref=e358]:
+                        - generic [ref=e359]: 4.89 out of 5 average rating
+                        - img [ref=e361]
+                        - generic [ref=e363]: "4.89"
+              - group [ref=e365]:
+                - link [ref=e366] [cursor=pointer]:
+                  - /url: /rooms/29542473?check_in=2026-08-21&check_out=2026-08-23&photo_id=2659033216&source_impression_id=p3_1780337405_P3zAa2AoFZUcPrL_&previous_page_section_name=1000
+                - generic [ref=e367]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e369] [cursor=pointer]:
+                          - img [ref=e371]
+                  - generic [ref=e373]:
+                    - generic [ref=e375]: Place to stay in Montmartre
+                    - generic [ref=e376]:
+                      - generic [ref=e380]:
+                        - generic [ref=e383]: ₹24,569
+                        - generic [ref=e385]: for 2 nights
+                        - generic [ref=e386]: ₹24,569 for 2 nights
+                      - generic [ref=e387]:
+                        - generic [ref=e388]: ","
+                        - generic [ref=e389]: ·
+                      - generic [ref=e390]:
+                        - generic [ref=e391]: 5.0 out of 5 average rating
+                        - img [ref=e393]
+                        - generic [ref=e395]: "5.0"
+              - link [ref=e398] [cursor=pointer]:
+                - /url: /s/Paris/homes?place_id=ChIJD7fiBh9u5kcRYJSMaMOCCwQ&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=FLEXIBLE_DATES&search_type=HOMEPAGE_CAROUSEL_CLICK
+                - generic [ref=e404]: See all
+          - group [ref=e409]:
+            - link [ref=e412] [cursor=pointer]:
+              - /url: /s/London/homes?place_id=ChIJdd4hrwug2EcRmSrV3Vo6llI&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=FLEXIBLE_DATES&search_type=HOMEPAGE_CAROUSEL_CLICK
+              - generic [ref=e413]:
+                - heading [level=2] [ref=e414]:
+                  - generic [ref=e415]: Stay in London
+                - img [ref=e417]
+            - generic [ref=e420]: 6 of 9 items showing
+            - generic [ref=e423]:
+              - button [disabled] [ref=e424]:
+                - generic [ref=e425]:
+                  - generic [ref=e426]: _
+                  - img [ref=e427]
+              - button [ref=e429] [cursor=pointer]:
+                - generic [ref=e430]:
+                  - generic [ref=e431]: _
+                  - img [ref=e432]
+            - generic [ref=e438]:
+              - group [ref=e440]:
+                - link [ref=e441] [cursor=pointer]:
+                  - /url: /rooms/8805567?check_in=2026-11-06&check_out=2026-11-08&photo_id=1729058342&source_impression_id=p3_1780337405_P3n1jxxjcxsRJC-Y&previous_page_section_name=1000
+                - generic [ref=e442]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e444] [cursor=pointer]:
+                          - img [ref=e446]
+                  - generic [ref=e448]:
+                    - generic [ref=e450]: Room in Lambeth
+                    - generic [ref=e451]:
+                      - generic [ref=e455]:
+                        - generic [ref=e458]: ₹21,214
+                        - generic [ref=e460]: for 2 nights
+                        - generic [ref=e461]: ₹21,214 for 2 nights
+                      - generic [ref=e462]:
+                        - generic [ref=e463]: ","
+                        - generic [ref=e464]: ·
+                      - generic [ref=e465]:
+                        - generic [ref=e466]: 4.95 out of 5 average rating
+                        - img [ref=e468]
+                        - generic [ref=e470]: "4.95"
+              - group [ref=e472]:
+                - link [ref=e473] [cursor=pointer]:
+                  - /url: /rooms/1396669506787422414?check_in=2026-07-24&check_out=2026-07-26&photo_id=2658002098&source_impression_id=p3_1780337405_P3OM7dfYr7VYqLLf&previous_page_section_name=1000
+                - generic [ref=e474]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e476] [cursor=pointer]:
+                          - img [ref=e478]
+                  - generic [ref=e480]:
+                    - generic [ref=e482]: Room in Acton
+                    - generic [ref=e483]:
+                      - generic [ref=e487]:
+                        - generic [ref=e490]: ₹16,639
+                        - generic [ref=e492]: for 2 nights
+                        - generic [ref=e493]: ₹16,639 for 2 nights
+                      - generic [ref=e494]:
+                        - generic [ref=e495]: ","
+                        - generic [ref=e496]: ·
+                      - generic [ref=e497]:
+                        - generic [ref=e498]: 5.0 out of 5 average rating
+                        - img [ref=e500]
+                        - generic [ref=e502]: "5.0"
+              - group [ref=e504]:
+                - link [ref=e505] [cursor=pointer]:
+                  - /url: /rooms/1407441620981249723?check_in=2026-06-05&check_out=2026-06-07&photo_id=2151711298&source_impression_id=p3_1780337405_P3FktIBssOKdSt1j&previous_page_section_name=1000
+                - generic [ref=e506]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e508] [cursor=pointer]:
+                          - img [ref=e510]
+                  - generic [ref=e512]:
+                    - generic [ref=e514]: Room in London
+                    - generic [ref=e515]:
+                      - generic [ref=e519]:
+                        - generic [ref=e522]: ₹14,224
+                        - generic [ref=e524]: for 2 nights
+                        - generic [ref=e525]: ₹14,224 for 2 nights
+                      - generic [ref=e526]:
+                        - generic [ref=e527]: ","
+                        - generic [ref=e528]: ·
+                      - generic [ref=e529]:
+                        - generic [ref=e530]: 5.0 out of 5 average rating
+                        - img [ref=e532]
+                        - generic [ref=e534]: "5.0"
+              - group [ref=e536]:
+                - link [ref=e537] [cursor=pointer]:
+                  - /url: /rooms/21063433?check_in=2026-07-24&check_out=2026-07-26&photo_id=2156739212&source_impression_id=p3_1780337405_P3v-LtmnOZlZ9XPG&previous_page_section_name=1000
+                - generic [ref=e538]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e540] [cursor=pointer]:
+                          - img [ref=e542]
+                  - generic [ref=e544]:
+                    - generic [ref=e546]: Room in London Borough of Islington
+                    - generic [ref=e547]:
+                      - generic [ref=e551]:
+                        - generic [ref=e554]: ₹17,380
+                        - generic [ref=e556]: for 2 nights
+                        - generic [ref=e557]: ₹17,380 for 2 nights
+                      - generic [ref=e558]:
+                        - generic [ref=e559]: ","
+                        - generic [ref=e560]: ·
+                      - generic [ref=e561]:
+                        - generic [ref=e562]: 4.89 out of 5 average rating
+                        - img [ref=e564]
+                        - generic [ref=e566]: "4.89"
+              - group [ref=e568]:
+                - link [ref=e569] [cursor=pointer]:
+                  - /url: /rooms/7537897?check_in=2026-11-20&check_out=2026-11-22&photo_id=92145103&source_impression_id=p3_1780337405_P3cyrxEg6ZBmXTOn&previous_page_section_name=1000
+                - generic [ref=e570]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e572] [cursor=pointer]:
+                          - img [ref=e574]
+                  - generic [ref=e576]:
+                    - generic [ref=e578]: Room in London
+                    - generic [ref=e579]:
+                      - generic [ref=e583]:
+                        - generic [ref=e586]: ₹16,613
+                        - generic [ref=e588]: for 2 nights
+                        - generic [ref=e589]: ₹16,613 for 2 nights
+                      - generic [ref=e590]:
+                        - generic [ref=e591]: ","
+                        - generic [ref=e592]: ·
+                      - generic [ref=e593]:
+                        - generic [ref=e594]: 4.94 out of 5 average rating
+                        - img [ref=e596]
+                        - generic [ref=e598]: "4.94"
+              - group [ref=e600]:
+                - link [ref=e601] [cursor=pointer]:
+                  - /url: /rooms/1676938453923992087?check_in=2026-08-07&check_out=2026-08-09&photo_id=2616896846&source_impression_id=p3_1780337405_P32TW40iCekuOZ0H&previous_page_section_name=1000
+                - generic [ref=e602]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e604] [cursor=pointer]:
+                          - img [ref=e606]
+                  - generic [ref=e608]:
+                    - generic [ref=e610]: Place to stay in Hammersmith and Fulham
+                    - generic [ref=e611]:
+                      - generic [ref=e615]:
+                        - generic [ref=e618]: ₹14,569
+                        - generic [ref=e620]: for 2 nights
+                        - generic [ref=e621]: ₹14,569 for 2 nights
+                      - generic [ref=e622]:
+                        - generic [ref=e623]: ","
+                        - generic [ref=e624]: ·
+                      - generic [ref=e625]:
+                        - generic [ref=e626]: 5.0 out of 5 average rating
+                        - img [ref=e628]
+                        - generic [ref=e630]: "5.0"
+              - group [ref=e632]:
+                - link [ref=e633] [cursor=pointer]:
+                  - /url: /rooms/1464398358185119415?check_in=2026-06-19&check_out=2026-06-21&photo_id=2251896015&source_impression_id=p3_1780337405_P3lTOBCMwKn1UbOD&previous_page_section_name=1000
+                - generic [ref=e634]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e636] [cursor=pointer]:
+                          - img [ref=e638]
+                  - generic [ref=e640]:
+                    - generic [ref=e642]: Room in Tower Hamlets
+                    - generic [ref=e643]:
+                      - generic [ref=e647]:
+                        - generic [ref=e650]: ₹23,514
+                        - generic [ref=e652]: for 2 nights
+                        - generic [ref=e653]: ₹23,514 for 2 nights
+                      - generic [ref=e654]:
+                        - generic [ref=e655]: ","
+                        - generic [ref=e656]: ·
+                      - generic [ref=e657]:
+                        - generic [ref=e658]: 5.0 out of 5 average rating
+                        - img [ref=e660]
+                        - generic [ref=e662]: "5.0"
+              - group [ref=e664]:
+                - link [ref=e665] [cursor=pointer]:
+                  - /url: /rooms/1640000147187383266?check_in=2026-08-21&check_out=2026-08-23&photo_id=2615977123&source_impression_id=p3_1780337405_P38y764UbkPGulHE&previous_page_section_name=1000
+                - generic [ref=e666]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - button [ref=e668] [cursor=pointer]:
+                      - img [ref=e670]
+                  - generic [ref=e672]:
+                    - generic [ref=e674]: Place to stay in Tower Hamlets
+                    - generic [ref=e675]:
+                      - generic [ref=e679]:
+                        - generic [ref=e682]: ₹17,125
+                        - generic [ref=e684]: for 2 nights
+                        - generic [ref=e685]: ₹17,125 for 2 nights
+                      - generic [ref=e686]:
+                        - generic [ref=e687]: ","
+                        - generic [ref=e688]: ·
+                      - generic [ref=e689]:
+                        - generic [ref=e690]: 5.0 out of 5 average rating
+                        - img [ref=e692]
+                        - generic [ref=e694]: "5.0"
+              - link [ref=e697] [cursor=pointer]:
+                - /url: /s/London/homes?place_id=ChIJdd4hrwug2EcRmSrV3Vo6llI&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=FLEXIBLE_DATES&search_type=HOMEPAGE_CAROUSEL_CLICK
+                - generic [ref=e703]: See all
+          - group [ref=e708]:
+            - link [ref=e711] [cursor=pointer]:
+              - /url: /s/Sao-Paulo/homes?place_id=ChIJ0WGkg4FEzpQRrlsz_whLqZs&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=FLEXIBLE_DATES&search_type=HOMEPAGE_CAROUSEL_CLICK
+              - generic [ref=e712]:
+                - heading [level=2] [ref=e713]:
+                  - generic [ref=e714]: Homes in Sao Paulo
+                - img [ref=e716]
+            - generic [ref=e719]: 6 of 9 items showing
+            - generic [ref=e722]:
+              - button [disabled] [ref=e723]:
+                - generic [ref=e724]:
+                  - generic [ref=e725]: _
+                  - img [ref=e726]
+              - button [ref=e728] [cursor=pointer]:
+                - generic [ref=e729]:
+                  - generic [ref=e730]: _
+                  - img [ref=e731]
+            - generic [ref=e737]:
+              - group [ref=e739]:
+                - link [ref=e740] [cursor=pointer]:
+                  - /url: /rooms/23136796?check_in=2026-06-19&check_out=2026-06-21&photo_id=1991135251&source_impression_id=p3_1780337405_P3DOdyvaZb5LIvU3&previous_page_section_name=1000
+                - generic [ref=e741]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e743] [cursor=pointer]:
+                          - img [ref=e745]
+                  - generic [ref=e747]:
+                    - generic [ref=e749]: Room in Jardim Paulista
+                    - generic [ref=e750]:
+                      - generic [ref=e754]:
+                        - generic [ref=e757]: ₹8,119
+                        - generic [ref=e759]: for 2 nights
+                        - generic [ref=e760]: ₹8,119 for 2 nights
+                      - generic [ref=e761]:
+                        - generic [ref=e762]: ","
+                        - generic [ref=e763]: ·
+                      - generic [ref=e764]:
+                        - generic [ref=e765]: 4.99 out of 5 average rating
+                        - img [ref=e767]
+                        - generic [ref=e769]: "4.99"
+              - group [ref=e771]:
+                - link [ref=e772] [cursor=pointer]:
+                  - /url: /rooms/975630266510729266?check_in=2026-06-12&check_out=2026-06-14&photo_id=1777093917&source_impression_id=p3_1780337405_P3yOMRX3RuRRbt10&previous_page_section_name=1000
+                - generic [ref=e773]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e775] [cursor=pointer]:
+                          - img [ref=e777]
+                  - generic [ref=e779]:
+                    - generic [ref=e781]: Room in Sao Paulo
+                    - generic [ref=e782]:
+                      - generic [ref=e786]:
+                        - generic [ref=e789]: ₹5,135
+                        - generic [ref=e791]: for 2 nights
+                        - generic [ref=e792]: ₹5,135 for 2 nights
+                      - generic [ref=e793]:
+                        - generic [ref=e794]: ","
+                        - generic [ref=e795]: ·
+                      - generic [ref=e796]:
+                        - generic [ref=e797]: 5.0 out of 5 average rating
+                        - img [ref=e799]
+                        - generic [ref=e801]: "5.0"
+              - group [ref=e803]:
+                - link [ref=e804] [cursor=pointer]:
+                  - /url: /rooms/1299528238329045963?check_in=2026-06-05&check_out=2026-06-07&photo_id=2134000843&source_impression_id=p3_1780337405_P3llGld-7o3XGIZz&previous_page_section_name=1000
+                - generic [ref=e805]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e807] [cursor=pointer]:
+                          - img [ref=e809]
+                  - generic [ref=e811]:
+                    - generic [ref=e813]: Flat in Sao Paulo
+                    - generic [ref=e814]:
+                      - generic [ref=e818]:
+                        - generic [ref=e821]: ₹13,591
+                        - generic [ref=e823]: for 2 nights
+                        - generic [ref=e824]: ₹13,591 for 2 nights
+                      - generic [ref=e825]:
+                        - generic [ref=e826]: ","
+                        - generic [ref=e827]: ·
+                      - generic [ref=e828]:
+                        - generic [ref=e829]: 5.0 out of 5 average rating
+                        - img [ref=e831]
+                        - generic [ref=e833]: "5.0"
+              - group [ref=e835]:
+                - link [ref=e836] [cursor=pointer]:
+                  - /url: /rooms/891348318271232638?check_in=2026-06-26&check_out=2026-06-28&photo_id=1658300784&source_impression_id=p3_1780337405_P31pQNqg9kEPi6EM&previous_page_section_name=1000
+                - generic [ref=e837]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e839] [cursor=pointer]:
+                          - img [ref=e841]
+                  - generic [ref=e843]:
+                    - generic [ref=e845]: Room in Sao Paulo
+                    - generic [ref=e846]:
+                      - generic [ref=e850]:
+                        - generic [ref=e853]: ₹7,680
+                        - generic [ref=e855]: for 2 nights
+                        - generic [ref=e856]: ₹7,680 for 2 nights
+                      - generic [ref=e857]:
+                        - generic [ref=e858]: ","
+                        - generic [ref=e859]: ·
+                      - generic [ref=e860]:
+                        - generic [ref=e861]: 4.98 out of 5 average rating
+                        - img [ref=e863]
+                        - generic [ref=e865]: "4.98"
+              - group [ref=e867]:
+                - link [ref=e868] [cursor=pointer]:
+                  - /url: /rooms/1542132534699850493?check_in=2026-06-12&check_out=2026-06-14&photo_id=2406851156&source_impression_id=p3_1780337405_P3KSEP4hkt5LT_Oi&previous_page_section_name=1000
+                - generic [ref=e869]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e871] [cursor=pointer]:
+                          - img [ref=e873]
+                  - generic [ref=e875]:
+                    - generic [ref=e877]: Flat in Sao Paulo
+                    - generic [ref=e878]:
+                      - generic [ref=e882]:
+                        - generic [ref=e885]: ₹11,676
+                        - generic [ref=e887]: for 2 nights
+                        - generic [ref=e888]: ₹11,676 for 2 nights
+                      - generic [ref=e889]:
+                        - generic [ref=e890]: ","
+                        - generic [ref=e891]: ·
+                      - generic [ref=e892]:
+                        - generic [ref=e893]: 4.9 out of 5 average rating
+                        - img [ref=e895]
+                        - generic [ref=e897]: "4.9"
+              - group [ref=e899]:
+                - link [ref=e900] [cursor=pointer]:
+                  - /url: /rooms/999372861842932025?check_in=2026-06-12&check_out=2026-06-14&photo_id=1851968104&source_impression_id=p3_1780337405_P33KgQ-ypUywFuvy&previous_page_section_name=1000
+                - generic [ref=e901]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e903] [cursor=pointer]:
+                          - img [ref=e905]
+                  - generic [ref=e907]:
+                    - generic [ref=e909]: Flat in Sao Paulo
+                    - generic [ref=e910]:
+                      - generic [ref=e914]:
+                        - generic [ref=e917]: ₹11,997
+                        - generic [ref=e919]: for 2 nights
+                        - generic [ref=e920]: ₹11,997 for 2 nights
+                      - generic [ref=e921]:
+                        - generic [ref=e922]: ","
+                        - generic [ref=e923]: ·
+                      - generic [ref=e924]:
+                        - generic [ref=e925]: 4.9 out of 5 average rating
+                        - img [ref=e927]
+                        - generic [ref=e929]: "4.9"
+              - group [ref=e931]:
+                - link [ref=e932] [cursor=pointer]:
+                  - /url: /rooms/1540641421961128000?check_in=2026-06-05&check_out=2026-06-07&photo_id=2454033128&source_impression_id=p3_1780337405_P31Q7mOdFuRaTi_9&previous_page_section_name=1000
+                - generic [ref=e933]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e935] [cursor=pointer]:
+                          - img [ref=e937]
+                  - generic [ref=e939]:
+                    - generic [ref=e941]: Apartment in Sao Paulo
+                    - generic [ref=e942]:
+                      - generic [ref=e946]:
+                        - generic [ref=e949]: ₹19,433
+                        - generic [ref=e951]: for 2 nights
+                        - generic [ref=e952]: ₹19,433 for 2 nights
+                      - generic [ref=e953]:
+                        - generic [ref=e954]: ","
+                        - generic [ref=e955]: ·
+                      - generic [ref=e956]:
+                        - generic [ref=e957]: 5.0 out of 5 average rating
+                        - img [ref=e959]
+                        - generic [ref=e961]: "5.0"
+              - group [ref=e963]:
+                - link [ref=e964] [cursor=pointer]:
+                  - /url: /rooms/1650838821337906641?check_in=2026-09-25&check_out=2026-09-27&photo_id=2569365518&source_impression_id=p3_1780337405_P325VG3HVCStQMEM&previous_page_section_name=1000
+                - generic [ref=e965]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e967] [cursor=pointer]:
+                          - img [ref=e969]
+                  - generic [ref=e971]:
+                    - generic [ref=e973]: Flat in Sao Paulo
+                    - generic [ref=e974]:
+                      - generic [ref=e978]:
+                        - generic [ref=e981]: ₹8,883
+                        - generic [ref=e983]: for 2 nights
+                        - generic [ref=e984]: ₹8,883 for 2 nights
+                      - generic [ref=e985]:
+                        - generic [ref=e986]: ","
+                        - generic [ref=e987]: ·
+                      - generic [ref=e988]:
+                        - generic [ref=e989]: 5.0 out of 5 average rating
+                        - img [ref=e991]
+                        - generic [ref=e993]: "5.0"
+              - link [ref=e996] [cursor=pointer]:
+                - /url: /s/Sao-Paulo/homes?place_id=ChIJ0WGkg4FEzpQRrlsz_whLqZs&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=FLEXIBLE_DATES&search_type=HOMEPAGE_CAROUSEL_CLICK
+                - generic [ref=e1002]: See all
+          - group [ref=e1007]:
+            - link [ref=e1010] [cursor=pointer]:
+              - /url: /s/Seoul/homes?place_id=ChIJzzlcLQGifDURm_JbQKHsEX4&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=FLEXIBLE_DATES&search_type=HOMEPAGE_CAROUSEL_CLICK
+              - generic [ref=e1011]:
+                - heading [level=2] [ref=e1012]:
+                  - generic [ref=e1013]: Places to stay in Seoul
+                - img [ref=e1015]
+            - generic [ref=e1018]: 6 of 9 items showing
+            - generic [ref=e1021]:
+              - button [disabled] [ref=e1022]:
+                - generic [ref=e1023]:
+                  - generic [ref=e1024]: _
+                  - img [ref=e1025]
+              - button [ref=e1027] [cursor=pointer]:
+                - generic [ref=e1028]:
+                  - generic [ref=e1029]: _
+                  - img [ref=e1030]
+            - generic [ref=e1036]:
+              - group [ref=e1038]:
+                - link [ref=e1039] [cursor=pointer]:
+                  - /url: /rooms/1516492985146334259?check_in=2026-08-07&check_out=2026-08-09&photo_id=2345858114&source_impression_id=p3_1780337406_P3V0p7Sh9fqKWdhv&previous_page_section_name=1000
+                - generic [ref=e1040]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e1042] [cursor=pointer]:
+                          - img [ref=e1044]
+                  - generic [ref=e1046]:
+                    - generic [ref=e1048]: Shared room in Mapo-gu
+                    - generic [ref=e1049]:
+                      - generic [ref=e1053]:
+                        - generic [ref=e1056]: ₹5,671
+                        - generic [ref=e1058]: for 2 nights
+                        - generic [ref=e1059]: ₹5,671 for 2 nights
+                      - generic [ref=e1060]:
+                        - generic [ref=e1061]: ","
+                        - generic [ref=e1062]: ·
+                      - generic [ref=e1063]:
+                        - generic [ref=e1064]: 5.0 out of 5 average rating
+                        - img [ref=e1066]
+                        - generic [ref=e1068]: "5.0"
+              - group [ref=e1070]:
+                - link [ref=e1071] [cursor=pointer]:
+                  - /url: /rooms/1668855420448792706?check_in=2026-06-05&check_out=2026-06-07&photo_id=2631671939&source_impression_id=p3_1780337406_P3yUJfKp8bKrrYWi&previous_page_section_name=1000
+                - generic [ref=e1072]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e1074] [cursor=pointer]:
+                          - img [ref=e1076]
+                  - generic [ref=e1078]:
+                    - generic [ref=e1080]: Place to stay in Mapo-gu
+                    - generic [ref=e1081]:
+                      - generic [ref=e1085]:
+                        - generic [ref=e1088]: ₹7,939
+                        - generic [ref=e1090]: for 2 nights
+                        - generic [ref=e1091]: ₹7,939 for 2 nights
+                      - generic [ref=e1092]:
+                        - generic [ref=e1093]: ","
+                        - generic [ref=e1094]: ·
+                      - generic [ref=e1095]:
+                        - generic [ref=e1096]: 5.0 out of 5 average rating
+                        - img [ref=e1098]
+                        - generic [ref=e1100]: "5.0"
+              - group [ref=e1102]:
+                - link [ref=e1103] [cursor=pointer]:
+                  - /url: /rooms/1591691424246848660?check_in=2026-06-05&check_out=2026-06-07&photo_id=2582285471&source_impression_id=p3_1780337406_P3_yCG_IgNEoUuFe&previous_page_section_name=1000
+                - generic [ref=e1104]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e1106] [cursor=pointer]:
+                          - img [ref=e1108]
+                  - generic [ref=e1110]:
+                    - generic [ref=e1112]: Home in Hapjjeong-dong
+                    - generic [ref=e1113]:
+                      - generic [ref=e1117]:
+                        - generic [ref=e1120]: ₹63,570
+                        - generic [ref=e1122]: for 2 nights
+                        - generic [ref=e1123]: ₹63,570 for 2 nights
+                      - generic [ref=e1124]:
+                        - generic [ref=e1125]: ","
+                        - generic [ref=e1126]: ·
+                      - generic [ref=e1127]:
+                        - generic [ref=e1128]: 5.0 out of 5 average rating
+                        - img [ref=e1130]
+                        - generic [ref=e1132]: "5.0"
+              - group [ref=e1134]:
+                - link [ref=e1135] [cursor=pointer]:
+                  - /url: /rooms/1679457331224179554?check_in=2026-08-28&check_out=2026-08-30&photo_id=2621412300&source_impression_id=p3_1780337406_P3kQ6war3u1EUFCo&previous_page_section_name=1000
+                - generic [ref=e1136]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e1138] [cursor=pointer]:
+                          - img [ref=e1140]
+                  - generic [ref=e1142]:
+                    - generic [ref=e1144]: Home in Sin-chon-dong
+                    - generic [ref=e1145]:
+                      - generic [ref=e1149]:
+                        - generic [ref=e1152]: ₹26,146
+                        - generic [ref=e1154]: for 2 nights
+                        - generic [ref=e1155]: ₹26,146 for 2 nights
+                      - generic [ref=e1156]:
+                        - generic [ref=e1157]: ","
+                        - generic [ref=e1158]: ·
+                      - generic [ref=e1159]:
+                        - generic [ref=e1160]: 5.0 out of 5 average rating
+                        - img [ref=e1162]
+                        - generic [ref=e1164]: "5.0"
+              - group [ref=e1166]:
+                - link [ref=e1167] [cursor=pointer]:
+                  - /url: /rooms/1673725817253049331?check_in=2026-07-03&check_out=2026-07-05&photo_id=2619675298&source_impression_id=p3_1780337406_P3zfd28mTdQjAp9-&previous_page_section_name=1000
+                - generic [ref=e1168]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e1170] [cursor=pointer]:
+                          - img [ref=e1172]
+                  - generic [ref=e1174]:
+                    - generic [ref=e1176]: Home in Gwanak-gu
+                    - generic [ref=e1177]:
+                      - generic [ref=e1181]:
+                        - generic [ref=e1184]: ₹23,815
+                        - generic [ref=e1186]: for 2 nights
+                        - generic [ref=e1187]: ₹23,815 for 2 nights
+                      - generic [ref=e1188]:
+                        - generic [ref=e1189]: ","
+                        - generic [ref=e1190]: ·
+                      - generic [ref=e1191]:
+                        - generic [ref=e1192]: 5.0 out of 5 average rating
+                        - img [ref=e1194]
+                        - generic [ref=e1196]: "5.0"
+              - group [ref=e1198]:
+                - link [ref=e1199] [cursor=pointer]:
+                  - /url: /rooms/732267603314454632?check_in=2026-06-05&check_out=2026-06-07&photo_id=1976748198&source_impression_id=p3_1780337406_P3Dy-37Gb-Y-a8FL&previous_page_section_name=1000
+                - generic [ref=e1200]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e1202] [cursor=pointer]:
+                          - img [ref=e1204]
+                  - generic [ref=e1206]:
+                    - generic [ref=e1208]: Shared room in Sin-chon-dong
+                    - generic [ref=e1209]:
+                      - generic [ref=e1213]:
+                        - generic [ref=e1216]: ₹6,366
+                        - generic [ref=e1218]: for 2 nights
+                        - generic [ref=e1219]: ₹6,366 for 2 nights
+                      - generic [ref=e1220]:
+                        - generic [ref=e1221]: ","
+                        - generic [ref=e1222]: ·
+                      - generic [ref=e1223]:
+                        - generic [ref=e1224]: 4.93 out of 5 average rating
+                        - img [ref=e1226]
+                        - generic [ref=e1228]: "4.93"
+              - group [ref=e1230]:
+                - link [ref=e1231] [cursor=pointer]:
+                  - /url: /rooms/1292345406210065524?check_in=2026-08-14&check_out=2026-08-16&photo_id=2032005098&source_impression_id=p3_1780337406_P3ig2Jx80fw2YeCU&previous_page_section_name=1000
+                - generic [ref=e1232]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e1234] [cursor=pointer]:
+                          - img [ref=e1236]
+                  - generic [ref=e1238]:
+                    - generic [ref=e1240]: Room in Yeongdeungpo-gu
+                    - generic [ref=e1241]:
+                      - generic [ref=e1245]:
+                        - generic [ref=e1248]: ₹7,561
+                        - generic [ref=e1250]: for 2 nights
+                        - generic [ref=e1251]: ₹7,561 for 2 nights
+                      - generic [ref=e1252]:
+                        - generic [ref=e1253]: ","
+                        - generic [ref=e1254]: ·
+                      - generic [ref=e1255]:
+                        - generic [ref=e1256]: 4.89 out of 5 average rating
+                        - img [ref=e1258]
+                        - generic [ref=e1260]: "4.89"
+              - group [ref=e1262]:
+                - link [ref=e1263] [cursor=pointer]:
+                  - /url: /rooms/1665220650623146418?check_in=2026-07-10&check_out=2026-07-12&photo_id=2628240608&source_impression_id=p3_1780337406_P34kNElD1LZnpCIj&previous_page_section_name=1000
+                - generic [ref=e1264]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - img
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: Guest favourite
+                            - generic: Guest favourite
+                        - button [ref=e1266] [cursor=pointer]:
+                          - img [ref=e1268]
+                  - generic [ref=e1270]:
+                    - generic [ref=e1272]: Home in Yeonnam-dong
+                    - generic [ref=e1273]:
+                      - generic [ref=e1277]:
+                        - generic [ref=e1280]: ₹25,138
+                        - generic [ref=e1282]: for 2 nights
+                        - generic [ref=e1283]: ₹25,138 for 2 nights
+                      - generic [ref=e1284]:
+                        - generic [ref=e1285]: ","
+                        - generic [ref=e1286]: ·
+                      - generic [ref=e1287]:
+                        - generic [ref=e1288]: 5.0 out of 5 average rating
+                        - img [ref=e1290]
+                        - generic [ref=e1292]: "5.0"
+              - link [ref=e1295] [cursor=pointer]:
+                - /url: /s/Seoul/homes?place_id=ChIJzzlcLQGifDURm_JbQKHsEX4&refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=weekend_trip&date_picker_type=FLEXIBLE_DATES&search_type=HOMEPAGE_CAROUSEL_CLICK
+                - generic [ref=e1301]: See all
+      - generic [ref=e1306]:
+        - heading [level=2] [ref=e1307]: Inspiration for future getaways
+        - generic [ref=e1308]:
+          - tablist [ref=e1311]:
+            - tab [selected] [ref=e1312]: Popular
+            - tab [ref=e1313] [cursor=pointer]: Arts & culture
+            - tab [ref=e1314] [cursor=pointer]: Beach
+            - tab [ref=e1315] [cursor=pointer]: Mountains
+            - tab [ref=e1316] [cursor=pointer]: Outdoors
+            - tab [ref=e1317] [cursor=pointer]: Things to do
+          - tabpanel [ref=e1320]:
+            - list [ref=e1321]:
+              - listitem [ref=e1322]:
+                - link [ref=e1323] [cursor=pointer]:
+                  - /url: /san-juan-puerto-rico/stays/cabins
+                  - generic [ref=e1324]: San Juan
+                  - generic [ref=e1325]: Cabin rentals
+              - listitem [ref=e1326]:
+                - link [ref=e1327] [cursor=pointer]:
+                  - /url: /san-diego-ca/stays/condos
+                  - generic [ref=e1328]: San Diego
+                  - generic [ref=e1329]: Apartment rentals
+              - listitem [ref=e1330]:
+                - link [ref=e1331] [cursor=pointer]:
+                  - /url: /miramar-beach-fl/stays
+                  - generic [ref=e1332]: Miramar Beach
+                  - generic [ref=e1333]: Holiday rentals
+              - listitem [ref=e1334]:
+                - link [ref=e1335] [cursor=pointer]:
+                  - /url: /barcelona-spain/stays
+                  - generic [ref=e1336]: Barcelona
+                  - generic [ref=e1337]: Holiday rentals
+              - listitem [ref=e1338]:
+                - link [ref=e1339] [cursor=pointer]:
+                  - /url: /tokyo-japan/stays/villas
+                  - generic [ref=e1340]: Tokyo
+                  - generic [ref=e1341]: Villa rentals
+              - listitem [ref=e1342]:
+                - link [ref=e1343] [cursor=pointer]:
+                  - /url: /montreal-canada/stays/monthly
+                  - generic [ref=e1344]: Montreal
+                  - generic [ref=e1345]: Monthly Rentals
+              - listitem [ref=e1346]:
+                - link [ref=e1347] [cursor=pointer]:
+                  - /url: /gulf-shores-al/stays/monthly
+                  - generic [ref=e1348]: Gulf Shores
+                  - generic [ref=e1349]: Monthly Rentals
+              - listitem [ref=e1350]:
+                - link [ref=e1351] [cursor=pointer]:
+                  - /url: /brooklyn-ny/stays/condos
+                  - generic [ref=e1352]: Brooklyn
+                  - generic [ref=e1353]: Apartment rentals
+              - listitem [ref=e1354]:
+                - link [ref=e1355] [cursor=pointer]:
+                  - /url: /savannah-ga/stays/cottages
+                  - generic [ref=e1356]: Savannah
+                  - generic [ref=e1357]: Cottage rentals
+              - listitem [ref=e1358]:
+                - link [ref=e1359] [cursor=pointer]:
+                  - /url: /manhattan-new-york-ny/stays/apartments
+                  - generic [ref=e1360]: Manhattan
+                  - generic [ref=e1361]: Flat rentals
+              - listitem [ref=e1362]:
+                - link [ref=e1363] [cursor=pointer]:
+                  - /url: /kansas-city-mo/stays/apartments
+                  - generic [ref=e1364]: Kansas City
+                  - generic [ref=e1365]: Flat rentals
+              - listitem [ref=e1366]:
+                - link [ref=e1367] [cursor=pointer]:
+                  - /url: /pocono-mountains-pa/stays/condos
+                  - generic [ref=e1368]: Pocono Mountains
+                  - generic [ref=e1369]: Apartment rentals
+              - listitem [ref=e1370]:
+                - link [ref=e1371] [cursor=pointer]:
+                  - /url: /santo-domingo-dominican-republic/stays/apartments
+                  - generic [ref=e1372]: Santo Domingo
+                  - generic [ref=e1373]: Flat rentals
+              - listitem [ref=e1374]:
+                - link [ref=e1375] [cursor=pointer]:
+                  - /url: /london-united-kingdom/stays/monthly
+                  - generic [ref=e1376]: London
+                  - generic [ref=e1377]: Monthly Rentals
+              - listitem [ref=e1378]:
+                - link [ref=e1379] [cursor=pointer]:
+                  - /url: /amsterdam-netherlands/stays
+                  - generic [ref=e1380]: Amsterdam
+                  - generic [ref=e1381]: Holiday rentals
+              - listitem [ref=e1382]:
+                - link [ref=e1383] [cursor=pointer]:
+                  - /url: /detroit-mi/stays/apartments
+                  - generic [ref=e1384]: Detroit
+                  - generic [ref=e1385]: Flat rentals
+              - listitem [ref=e1386]:
+                - link [ref=e1387] [cursor=pointer]:
+                  - /url: /albuquerque-nm/stays/condos
+                  - generic [ref=e1388]: Albuquerque
+                  - generic [ref=e1389]: Apartment rentals
+              - listitem [ref=e1390]:
+                - button [ref=e1391] [cursor=pointer]:
+                  - generic [ref=e1392]: Show more
+                  - img [ref=e1393]
+      - contentinfo [ref=e1396]:
+        - generic [ref=e1397]:
+          - heading [level=2] [ref=e1399]: Site Footer
+          - generic [ref=e1400]:
+            - generic [ref=e1401]:
+              - heading [level=3] [ref=e1402]: Support
+              - list [ref=e1403]:
+                - listitem [ref=e1404]:
+                  - link [ref=e1405] [cursor=pointer]:
+                    - /url: /help/home?from=footer
+                    - text: Help Centre
+                - listitem [ref=e1406]:
+                  - link [ref=e1407] [cursor=pointer]:
+                    - /url: /help/contact-us?entry=DESKTOP_FOOTER_SAFETY
+                    - text: Get help with a safety issue
+                - listitem [ref=e1408]:
+                  - link [ref=e1409] [cursor=pointer]:
+                    - /url: /aircover
+                    - text: AirCover
+                - listitem [ref=e1410]:
+                  - link [ref=e1411] [cursor=pointer]:
+                    - /url: /against-discrimination
+                    - text: Anti-discrimination
+                - listitem [ref=e1412]:
+                  - link [ref=e1413] [cursor=pointer]:
+                    - /url: /accessibility
+                    - text: Disability support
+                - listitem [ref=e1414]:
+                  - link [ref=e1415] [cursor=pointer]:
+                    - /url: /help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19
+                    - text: Cancellation options
+                - listitem [ref=e1416]:
+                  - link [ref=e1417] [cursor=pointer]:
+                    - /url: /neighbors
+                    - text: Report neighbourhood concern
+            - generic [ref=e1418]:
+              - heading [level=3] [ref=e1419]: Hosting
+              - list [ref=e1420]:
+                - listitem [ref=e1421]:
+                  - link [ref=e1422] [cursor=pointer]:
+                    - /url: /host/homes?from_footer=1
+                    - text: Airbnb your home
+                - listitem [ref=e1423]:
+                  - link [ref=e1424] [cursor=pointer]:
+                    - /url: /host/experiences
+                    - text: Airbnb your experience
+                - listitem [ref=e1425]:
+                  - link [ref=e1426] [cursor=pointer]:
+                    - /url: /host/services
+                    - text: Airbnb your service
+                - listitem [ref=e1427]:
+                  - link [ref=e1428] [cursor=pointer]:
+                    - /url: /aircover-for-hosts
+                    - text: AirCover for Hosts
+                - listitem [ref=e1429]:
+                  - link [ref=e1430] [cursor=pointer]:
+                    - /url: /resources
+                    - text: Hosting resources
+                - listitem [ref=e1431]:
+                  - link [ref=e1432] [cursor=pointer]:
+                    - /url: https://community.withairbnb.com/t5/Community-Center/ct-p/community-center
+                    - text: Community forum
+                - listitem [ref=e1433]:
+                  - link [ref=e1434] [cursor=pointer]:
+                    - /url: /help/responsible-hosting
+                    - text: Hosting responsibly
+                - listitem [ref=e1435]:
+                  - link [ref=e1436] [cursor=pointer]:
+                    - /url: /e/intro-to-hosting
+                    - text: Join a free hosting class
+                - listitem [ref=e1437]:
+                  - link [ref=e1438] [cursor=pointer]:
+                    - /url: /host/co-hosts
+                    - text: Find a co‑host
+                - listitem [ref=e1439]:
+                  - link [ref=e1440] [cursor=pointer]:
+                    - /url: /refer
+                    - text: Refer a host
+            - generic [ref=e1441]:
+              - heading [level=3] [ref=e1442]: Airbnb
+              - list [ref=e1443]:
+                - listitem [ref=e1444]:
+                  - link [ref=e1445] [cursor=pointer]:
+                    - /url: /release
+                    - text: 2026 Summer Release
+                - listitem [ref=e1446]:
+                  - link [ref=e1447] [cursor=pointer]:
+                    - /url: /press/news
+                    - text: Newsroom
+                - listitem [ref=e1448]:
+                  - link [ref=e1449] [cursor=pointer]:
+                    - /url: /careers
+                    - text: Careers
+                - listitem [ref=e1450]:
+                  - link [ref=e1451] [cursor=pointer]:
+                    - /url: https://investors.airbnb.com
+                    - text: Investors
+                - listitem [ref=e1452]:
+                  - link [ref=e1453] [cursor=pointer]:
+                    - /url: https://www.airbnb.org?locale=en-IN
+                    - text: Airbnb.org emergency stays
+          - generic [ref=e1454]:
+            - generic [ref=e1455]: Footer section
+            - generic [ref=e1457]:
+              - generic [ref=e1459]:
+                - generic [ref=e1460]: © 2026 Airbnb, Inc.
+                - generic [ref=e1461]:
+                  - generic [ref=e1463]: ·
+                  - list [ref=e1465]:
+                    - listitem [ref=e1466]:
+                      - link [ref=e1467] [cursor=pointer]:
+                        - /url: /terms/privacy_policy
+                        - text: Privacy
+                      - generic [ref=e1468]:
+                        - generic:
+                          - generic: ·
+                    - listitem [ref=e1469]:
+                      - link [ref=e1470] [cursor=pointer]:
+                        - /url: /terms
+                        - text: Terms
+                      - generic [ref=e1471]:
+                        - generic:
+                          - generic: ·
+                    - listitem [ref=e1472]:
+                      - link [ref=e1473] [cursor=pointer]:
+                        - /url: /about/company-details
+                        - text: Company details
+              - generic [ref=e1474]:
+                - generic [ref=e1476]:
+                  - button [ref=e1478] [cursor=pointer]:
+                    - generic [ref=e1479]:
+                      - generic:
+                        - img
+                        - text: English (IN)
+                  - button [ref=e1481] [cursor=pointer]:
+                    - generic [ref=e1483]:
+                      - generic [ref=e1484]: ₹
+                      - generic [ref=e1485]: INR
+                - list [ref=e1487]:
+                  - listitem [ref=e1488]:
+                    - link [ref=e1489] [cursor=pointer]:
+                      - /url: https://www.facebook.com/AirbnbIndia
+                      - img [ref=e1491]
+                  - listitem [ref=e1493]:
+                    - link [ref=e1494] [cursor=pointer]:
+                      - /url: https://twitter.com/airbnb_in
+                      - img [ref=e1496]
+                  - listitem [ref=e1498]:
+                    - link [ref=e1499] [cursor=pointer]:
+                      - /url: https://instagram.com/airbnb
+                      - img [ref=e1501]
+  - dialog [active] [ref=e1510]:
+    - button "Close" [ref=e1512] [cursor=pointer]:
+      - img [ref=e1514]
+    - generic [ref=e1516]:
+      - img [ref=e1518]
+      - generic [ref=e1519]:
+        - heading "Save 10% on a summertime trip" [level=2] [ref=e1520]
+        - paragraph [ref=e1521]:
+          - text: Book within 7 days and save up to ₹2,000 on your next stay.
+          - link "Terms apply" [ref=e1522] [cursor=pointer]:
+            - /url: https://www.airbnb.com/e/y26apr-in-b
+    - button "Log in to claim offer" [ref=e1524] [cursor=pointer]:
+      - generic [ref=e1525]:
+        - generic: Log in to claim offer
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '../../src/fixtures/pageFixtures';
+  2  | 
+  3  | /**
+  4  |  * Homepage Test Suite
+  5  |  *
+  6  |  * Validates the landing page loads correctly and all key
+  7  |  * interactive elements are present and functional.
+  8  |  */
+  9  | test.describe('Homepage', () => {
+  10 |   test.beforeEach(async ({ homePage }) => {
+  11 |     await homePage.goto();
+  12 |   });
+  13 | 
+  14 |   /**
+  15 |    * HOME-001: Page loads with correct title
+  16 |    */
+  17 |   test('HOME-001: should load with Airbnb branding in title', async ({ homePage }) => {
+  18 |     await homePage.assertPageLoaded();
+  19 |     await homePage.assertTitle('Airbnb');
+  20 |   });
+  21 | 
+  22 |   /**
+  23 |    * HOME-002: Search bar is present
+  24 |    */
+  25 |   test('HOME-002: search bar should be visible on load', async ({ homePage }) => {
+  26 |     await expect(homePage.destinationInput).toBeVisible();
+  27 |   });
+  28 | 
+  29 |   /**
+  30 |    * HOME-003: Destination input is interactive
+  31 |    */
+  32 |   test('HOME-003: destination input should accept text', async ({ homePage }) => {
+> 33 |     await homePage.destinationInput.click();
+     |                                     ^ Error: locator.click: Test timeout of 60000ms exceeded.
+  34 |     await homePage.destinationInput.fill('Paris');
+  35 |     await expect(homePage.destinationInput).toHaveValue('Paris');
+  36 |   });
+  37 | 
+  38 |   /**
+  39 |    * HOME-004: Navigation shows Log in and Sign up
+  40 |    */
+  41 |   test('HOME-004: navigation should show authentication options', async ({ page }) => {
+  42 |     const hasLogIn = await page.getByRole('link', { name: /log in/i }).isVisible().catch(() => false);
+  43 |     const hasSignUp = await page.getByRole('link', { name: /sign up/i }).isVisible().catch(() => false);
+  44 |     const hasUserMenu = await page.locator('[data-testid="cypress-headernav-profile"]').isVisible().catch(() => false);
+  45 | 
+  46 |     // Either individual links or the user menu button should be present
+  47 |     expect(hasLogIn || hasSignUp || hasUserMenu).toBe(true);
+  48 |   });
+  49 | 
+  50 |   /**
+  51 |    * HOME-005: Listing cards are shown on homepage
+  52 |    */
+  53 |   test('HOME-005: should display listing cards on the homepage', async ({ homePage }) => {
+  54 |     const count = await homePage.getListingCount();
+  55 |     expect(count).toBeGreaterThan(0);
+  56 |   });
+  57 | 
+  58 |   /**
+  59 |    * HOME-006: "Become a Host" link is present
+  60 |    */
+  61 |   test('HOME-006: should display Become a Host link', async ({ homePage }) => {
+  62 |     await expect(homePage.becomeHostLink).toBeVisible();
+  63 |   });
+  64 | 
+  65 |   /**
+  66 |    * HOME-007: Page is responsive — mobile viewport
+  67 |    */
+  68 |   test('HOME-007: homepage should be responsive on mobile viewports', async ({ page }) => {
+  69 |     await page.setViewportSize({ width: 390, height: 844 }); // iPhone 14 size
+  70 |     await page.goto('https://www.airbnb.com');
+  71 |     await page.waitForLoadState('domcontentloaded');
+  72 | 
+  73 |     // Page should have loaded without horizontal overflow
+  74 |     const bodyWidth = await page.evaluate(() => document.body.scrollWidth);
+  75 |     expect(bodyWidth).toBeLessThanOrEqual(420); // Slight tolerance
+  76 |   });
+  77 | 
+  78 |   /**
+  79 |    * HOME-008: Airbnb logo links back to homepage
+  80 |    */
+  81 |   test('HOME-008: clicking the logo should navigate to homepage', async ({ page }) => {
+  82 |     // First navigate away
+  83 |     await page.goto('https://www.airbnb.com/s/New-York/homes');
+  84 |     await page.waitForLoadState('domcontentloaded');
+  85 | 
+  86 |     // Click the logo
+  87 |     const logo = page.locator('[aria-label="Airbnb homepage"]')
+  88 |       .or(page.locator('a[href="/"]').first());
+  89 |     await logo.click();
+  90 | 
+  91 |     await page.waitForLoadState('domcontentloaded');
+  92 |     expect(page.url()).toMatch(/airbnb\.com\/?$/);
+  93 |   });
+  94 | });
+  95 | 
+```
